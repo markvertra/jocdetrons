@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montez', cursive;
+}
+
+.main-section {
+    background-image: url("../img/medievalBackground.jpg");
+    background-repeat: no-repeat;
+    height: 800px;
+    border: 50px black solid;
+    text-align: center;
+}
+
+.title-box {
+    margin-top: 10%;
+    color: yellowgreen;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px black;
+}
+
+.game-title {
+    font-size: 6em;
+}
+
+.game-subtitle {
+    font-size: 4em;
+}
+
+.game-buttons {
+    margin-top: 5%;
+}
+
+.btn {
+    color: white;
+    font-size: 2em;
+    margin: 2%;
+}
+
+.btn:hover {
+    color: black;
+    font-size: 1.8em
+}
