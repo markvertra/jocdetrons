@@ -1,6 +1,8 @@
+var player1;
+
 $(document).ready(function(){
 
-    var player1;
+    
 
     $(".up-btn").on("click", function(){
         var relevantSpan = ($(this).parent().find('span'));
@@ -24,19 +26,28 @@ $(document).ready(function(){
     });
 
     $(".create-btn").on("click", function(){
-        $(".create-section").css("display", "none");
-        $(".map-section").css("display", "block");
-        $(".map-display").css("display", "block");
-        var player1 = new Character($(".name-input").val(),
+        if (isEmptyInput(".name-input")) {
+            $(".name-input").css("border", "3px solid red");
+        } else if (isEmptyInput(".house-input")) {
+            $(".name-input").css("border", "none");
+            $(".house-input").css("border", "3px solid red");
+        } else {
+            $(".name-input").css("border", "none");
+            $(".house-input").css("border", "none");
+            $(".create-section").css("display", "none");
+            $(".map-section").css("display", "block");
+            $(".map-display").css("display", "block");
+            player1 = new Character($(".name-input").val(),
                                     $(".house-input").val(),
                                     "IMAGE",
                                     parseInt($(".strength-value").text()),
                                     parseInt($(".cunning-value").text()),
                                     parseInt($(".stamina-value").text()),
                                     parseInt($(".charisma-value").text())
-        );
-        console.log(player1);
-    });
+                );  
+            }
+        });  
+
 
     $(".right-btn").on("click", function(){
         $(".img-one").css("display", "none");
@@ -48,3 +59,11 @@ $(document).ready(function(){
         $(".img-one").css("display", "block");
     });
 });
+
+function isEmptyInput(input){
+    if ($(input).val() == "") {
+        return true;
+    } else {
+        return false;
+    }
+}
