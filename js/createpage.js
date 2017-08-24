@@ -44,7 +44,8 @@ $(document).ready(function(){
                                     parseInt($(".cunning-value").text()),
                                     parseInt($(".stamina-value").text()),
                                     parseInt($(".charisma-value").text())
-                );  
+                );
+            createReset();
             }
         });  
 
@@ -66,4 +67,14 @@ function isEmptyInput(input){
     } else {
         return false;
     }
+}
+
+function createReset(){
+    $(".name-input").val("");
+    $(".house-input").val("");
+    $(".strength-value").text("1");
+    $(".cunning-value").text("1");
+    $(".stamina-value").text("1");
+    $(".charisma-value").text("1");
+    $(".allocated-points").text("4");
 }
