@@ -3,7 +3,7 @@
     font-family: 'Montez', cursive;
 }
 
-.main-section {
+.first-section {
     background-image: url("../img/medievalBackground.jpg");
     background-repeat: no-repeat;
     height: 800px;
@@ -38,5 +38,49 @@
 
 .btn:hover {
     color: black;
-    font-size: 1.8em
+}
+
+.footer {
+    color: white;
+    margin-top: 10%;
+    font-family: 'Raleway', sans-serif;
+}
+
+.instructions {
+    font-size: 1.8em;
+    position: absolute;
+    padding: 50px;
+    height: 75%;
+    width: 70%;
+    top: 12%;
+    left: 15%;
+    background-image: url("../img/paperscrollBackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+
+}
+
+.instructions-title {
+    font-size: 2em;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 30px;
+}
+
+.instructions-text {
+    font-size: 1.3em;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.acknowledged {
+    font-size: 1.4em;
+    margin-top: 25px;
+    padding: 10px 30px;
+    border: none;
+    background-color: rgba(199, 154, 56, 0.65);
+}
+
+.acknowledged:hover {
+    color: white;
 }

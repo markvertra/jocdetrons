@@ -6,20 +6,89 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/create.css">
     <link href="https://fonts.googleapis.com/css?family=Montez" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <title>Fantasy Game of Thrones</title>
 </head>
 <body>
-    <main class="main-section">
+    <main class="first-section">
         <div class="title-box">
             <h1 class="game-title">Fantasy Game of Thrones</h1>
             <h2 class="game-subtitle">You win or you lie</h2>
         </div>
+        <div class="instructions">
+            <h5 class="instructions-title">The War Without End</h5>
+            <p class="instructions-text">
+            After having vanquished the Night King and his army, Jon Snow and friends thought
+            that Westeros was finally safe.
+            <br><br>
+            Little did he know that Qyburn had resurrected a range of zombie villians
+            from ages past. 
+            <br><br>
+            Pick your hero and save Westeros from these evildoers, 
+            or Westeros will fall into darkness forever.<p>
+            <button class="acknowledged instructions-killer">I understand, my Lord</button>
+            </div>
+            
         <div class="game-buttons">
             <h4 class="btn play-button">1 PLAYER</h4>
             <h4 class="btn multi-play-button">2 PLAYER</h4>
             <h4 class="btn instructions-button">INSTRUCTIONS</h4>
+            <p class="footer">Made with love and care and swords by Mark Allen</p>
         </div>
     </main>
+
+    <main class="create-section">
+        <div class="title-box create-title-box">
+            <h1 class="game-title create-title">Create Your Hero</h1>
+        </div>
+        <div class="creation-box">
+            <div class="character-creator">
+                <div class="left-part">
+                    <h4>Character Details</h4>
+                    <label for="name">Name</label>
+                    <input class="name-input" id="name" type="text" placeholder="Jon"><br>
+                    <label for="house">House</label>
+                    <input class="house-input" id="house" type="text" placeholder="Snow"><br>
+                    <h4>Character Attributes</h4>
+                    <div class="strength-setter setter">
+                        <p class="strength">Strength: <span class="strength-value attr-val">1</span></p>
+                        <button class="strength-up-button up-btn">+</button>
+                        <button class="strength-down-button down-btn">-</button><br>
+                    </div>
+                    <div class="cunning-setter setter">
+                        <p class="cunning">Cunning: <span class="cunning-value attr-val">1</span></p>
+                        <button class="cunning-up-button up-btn">+</button>
+                        <button class="cunning-down-button down-btn">-</button><br>
+                    </div>
+                    <div class="stamina-setter setter">
+                        <p class="stamina">Stamina: <span class="stamina-value attr-val">1</span></p>
+                        <button class="stamina-up-button up-btn">+</button>
+                        <button class="stamina-down-button down-btn">-</button><br>
+                    </div>
+                    <div class="charisma-setter setter">
+                        <p class="charisma">Charisma: <span class="charisma-value attr-val">1</span></p>
+                        <button class="charisma-up-button up-btn">+</button>
+                        <button class="charisma-down-button down-btn">-</button><br>
+                    </div>
+                    <p class="points-reader">Max Points: 25  &nbsp  Allocated Points: <span class="allocated-points">4</span></p>
+                </div>
+                <div class="right-part">
+                    <div class="character-image">
+                        <h4>Character Image</h4>
+                            <div class="img-selector">
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <button class="acknowledged coward-btn">Flee like Theon</button>
+            <button class="acknowledged create-btn">Ready to serve, my lord</button>
+        </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/mainpage.js"></script>
+    <script src="js/createpage.js"></script>
 </body>
 </html>
