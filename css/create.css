@@ -4,7 +4,7 @@
     height: 800px;
     border: 50px black solid;
     text-align: center;
-/*    display: none; */
+    display: none;
 }
 
 .first-section {
@@ -77,7 +77,39 @@
 .img-selector {
     height: 270px;
     width: 280px;
-    border: 2px solid red;
+    padding: 0px;
+}
+
+.list-image {
+    margin: 0px;
+    height: 270px;
+    width: 280px;
+}
+
+.img-one {
+    background-image: url("../img/northerner.jpg");
+    background-size: cover;
+}
+
+.img-two {
+    background-image: url("../img/lannister.jpg");
+    background-size: cover;
+    display: none;
+}
+
+.img-three {
+    display: none;
+}
+
+.img-four {
+    display: none;
+}
+
+.left-btn, .right-btn {
+    line-height: 12px;
+    height: 30px;
+    width: 135px;
+    margin-top:5px;
 }
 
 .points-reader {

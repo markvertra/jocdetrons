@@ -1,0 +1,42 @@
+.map-section {
+    background-image: url("../img/westeros-map.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    border: 50px black solid;
+    text-align: center;
+}
+
+.map-display {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    padding: 80px 50px 50px 50px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.map-instructions {
+    font-size: 3em;
+    color: yellowgreen;
+    margin-bottom: 20px;
+}
+
+.map-event {
+    border-radius: 45px;
+    height: 15px;
+    width: 15px;
+    background-color: red;
+    display: none;
+}
+
+.map-event-winterfell {
+    position: absolute;
+    top: 27%;
+    left: 23%;
+}
+
+.map-event-kings-landing {
+    position: absolute;
+    top: 64%;
+    left: 27%;
+}

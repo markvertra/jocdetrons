@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/create.css">
+    <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="css/battle.css">
     <link href="https://fonts.googleapis.com/css?family=Montez" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <title>Fantasy Game of Thrones</title>
@@ -78,7 +80,14 @@
                     <div class="character-image">
                         <h4>Character Image</h4>
                             <div class="img-selector">
+                                <ul>
+                                    <li class="img-one list-image"></li>
+                                    <li class="img-two list-image"></li>
+                                    <li class="img-three list-image"></li>
+                                    <li class="img-four list-image"></li>
                             </div>
+                            <button class="acknowledged left-btn"><</button>
+                            <button class="acknowledged right-btn">></button>
                     </div>
                 </div>
             </div>
@@ -87,8 +96,44 @@
         </div>
     </main>
 
+    <main class="map-section">
+        <div class="map-display">
+            <p class="map-instructions"> Noble Warrior. The situation is dire.<br><br>
+                Using foul magic, Qyburn is resurrecting
+                old enemies in different parts of Westeros. <br><br>
+
+                If you see a location flashing, it is in danger. <br>
+                Click the flash to use Melisandre's 
+                magic teleportation device to warp to that location and commence battle.</p>
+                <button class="acknowledged map-quit-btn">Run like the hound in a fire</button>
+                <button class="acknowledged map-instructions-hide-btn">I will save Westeros, my lord</button>
+        </div>
+        <div class="map-event map-event-winterfell">
+        </div>
+        <div class="map-event map-event-kings-landing">
+        </div>
+    </main>
+
+    <main class="battle-section">
+        <div class="title-box battle-title-box">
+            <h1 class="game-title battle-title">Time to Battle</h1>
+        </div>
+        <div class="battlefield">
+            <div class="player-one">
+                <h3 class="player-one-name">Player One</h3>
+            </div>
+            <div class="player-two">
+                <h3 class="player-two-name">Player Two</h3>
+            </div>
+        </div>
+        <button class="battle-quit-btn acknowledged">Slither Away Like Littlefinger</button>
+    </main>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/mainpage.js"></script>
     <script src="js/createpage.js"></script>
+    <script src="js/mappage.js"></script>
+    <script src="js/battlepage.js"></script>
+    <script src="js/characters.js"></script>
 </body>
 </html>

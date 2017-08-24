@@ -1,0 +1,44 @@
+.battle-section {
+    background-image: url("../img/medievalBackground.jpg");
+    background-repeat: no-repeat;
+    height: 800px;
+    border: 50px black solid;
+    text-align: center;
+    display: none;
+}
+
+.battle-title-box {
+    margin-top: 2%;
+}
+
+.battlefield {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: auto;
+    width: 90%;
+    height: 60%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    color: yellowgreen;
+    padding: 20px;
+}
+
+.player-one, .player-two {
+    text-align: left;
+    width: 50%;
+    height: 90%;
+}
+
+.player-two {
+    text-align: right;
+}
+
+.player-one-name, .player-two-name {
+    font-size: 2em;
+}
+
+.quit-btn {
+    position: absolute;
+    top: 80%;
+    left: 41%;
+}

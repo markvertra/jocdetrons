@@ -1,18 +1,19 @@
-
 $(document).ready(function(){
 
+    var player1;
+
     $(".up-btn").on("click", function(){
-        var relevantDiv = ($(this).parent());
-        console.log(relevantDiv);
-        // var strengthUpper = parseInt($(".strength-value").text()) + 1;
-        // $(".strength-value").text(strengthUpper);
+        var relevantSpan = ($(this).parent().find('span'));
+        var upper = parseInt(relevantSpan.text()) + 1;
+        $(relevantSpan).text(upper);
         var points = parseInt($(".allocated-points").text()) + 1;
         $(".allocated-points").text(points);
     });
 
-    $(".strength-down-button").on("click", function(){
-        var strengthDown = parseInt($(".strength-value").text()) - 1;
-        $(".strength-value").text(strengthDown);
+    $(".down-btn").on("click", function(){
+        var relevantSpan = ($(this).parent().find('span'));
+        var downer = parseInt(relevantSpan.text()) - 1;
+        $(relevantSpan).text(downer);
         var points = parseInt($(".allocated-points").text()) - 1;
         $(".allocated-points").text(points);
     });
@@ -23,6 +24,27 @@ $(document).ready(function(){
     });
 
     $(".create-btn").on("click", function(){
-        alert("Character creation in testing");
+        $(".create-section").css("display", "none");
+        $(".map-section").css("display", "block");
+        $(".map-display").css("display", "block");
+        var player1 = new Character($(".name-input").val(),
+                                    $(".house-input").val(),
+                                    "IMAGE",
+                                    parseInt($(".strength-value").text()),
+                                    parseInt($(".cunning-value").text()),
+                                    parseInt($(".stamina-value").text()),
+                                    parseInt($(".charisma-value").text())
+        );
+        console.log(player1);
+    });
+
+    $(".right-btn").on("click", function(){
+        $(".img-one").css("display", "none");
+        $(".img-two").css("display", "block");
+    });
+
+    $(".left-btn").on("click", function(){
+        $(".img-two").css("display", "none");
+        $(".img-one").css("display", "block");
     });
 });
