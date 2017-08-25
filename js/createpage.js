@@ -78,7 +78,7 @@ $(document).ready(function(){
             $(".create-section").css("display", "none");
             $(".map-section").css("display", "block");
             $(".map-display").css("display", "block");
-            console.log($(".affiliation-input").val());
+            $(".affiliation-input").val();
             player1 = new Character($(".name-input").val(),
                                     $(".house-input").val(),
                                     $(".affiliation-input").val(),
@@ -90,8 +90,8 @@ $(document).ready(function(){
                                     swordAttack,
                                     shieldDefence,
                                     prayer,
-                                    "DOG",
-                                    "DOG"
+                                    AFFILIATION_ABILITY[$(".affiliation-input").val()],
+                                    AFFILIATION_ABILITY2[$(".affiliation-input").val()]
                 );
             createReset();
             }

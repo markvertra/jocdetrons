@@ -16,6 +16,10 @@ $(document).ready(function(){
         $(".map-event").on("click", function(){
             $(".map-section").css("display", "none");
             $(".battle-section").css("display", "block");
+            $(".ability-one .ability-name").text(player1.abilityOne.name);
+            $(".ability-two .ability-name").text(player1.abilityTwo.name);
+            $(".ability-three .ability-name").text(player1.abilityThree.name);
+            $(".special-ability .ability-name").text(player1.specialAttack.name);
             $(this).css("display", "none");
             if ($(this).hasClass("map-event-winterfell")) {
                 player2 = ramseyBolton;
