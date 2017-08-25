@@ -57,6 +57,23 @@
     height: 28px;
     font-size: 0.6em;
 }
+.attribute-info {
+    width: 210px;
+    height: 100px;
+    position: absolute;
+    top: 42%;
+    left: 42.5%;
+    border: black 2px solid;
+    background-image: url("../img/paperscrollBackground.jpg");
+    display: none;
+    color: black;
+    text-align: left;
+    vertical-align: middle;
+    padding: 10px;
+    font-size: 0.7em;
+    text-shadow: none;
+    font-family: "raleway", sans-serif;
+}
 
 
 .up-btn, .down-btn {

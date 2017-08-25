@@ -26,8 +26,13 @@
     border-radius: 45px;
     height: 15px;
     width: 15px;
-    background-color: red;
     display: none;
+    animation: color_change 1s infinite alternate;
+}
+
+@keyframes color_change {
+	from { background-color: red; }
+	to { background-color: orange; }
 }
 
 .map-event-winterfell {

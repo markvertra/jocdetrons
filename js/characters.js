@@ -1,3 +1,11 @@
+var CHAR_IMAGE_PATH = ["../GameOfThrones/img/characterimages/"];
+var CHAR_IMAGE_URLS = [CHAR_IMAGE_PATH + "northerner.jpg",
+                       CHAR_IMAGE_PATH + "lannister.jpg",
+                       CHAR_IMAGE_PATH + "toughfemale.jpg",
+                       CHAR_IMAGE_PATH + "swordwoman.jpg",
+                       CHAR_IMAGE_PATH + "femalemacer.jpg",
+                       CHAR_IMAGE_PATH + "spearknight.jpg"];
+
 function Character(name, surname, affiliation, image, strength, cunning, stamina, charisma) {
     this.name = name;
     this.surname = surname;
@@ -7,12 +15,14 @@ function Character(name, surname, affiliation, image, strength, cunning, stamina
     this.cunning = cunning;
     this.stamina = stamina;
     this.charisma = charisma;
+
+    this.health = 100 + this.stamina * 5;
 }
 
 var ramseyBolton = new Character("Ramsey",
                                 "Bolton",
                                 "Zombie",
-                                "../img/characterimages/ramseyBolton.jpg",
+                                CHAR_IMAGE_PATH + "ramseyBolton.jpg",
                                 4, 11, 5, 2
 
 );
@@ -20,21 +30,21 @@ var ramseyBolton = new Character("Ramsey",
 var gregorClegane = new Character("Gregor",
                                   "Clegane",
                                   "Zombie",
-                                  "../img/characterimages/gregorClegane.jpg",
-                                 17, 1, 5, 1
+                                CHAR_IMAGE_PATH + "gregorClegane.jpg",
+                                 14, 1, 11, 1
 );
 
 var tywinLannister = new Character("Tywin",
                                    "Lannister",
                                    "Zombie",
-                                   "../img/characterimages/tywinLannister.jpg",
+                                CHAR_IMAGE_PATH + "tywinLannister.jpg",
                                   5, 10, 3, 7
 );
 
 var stannisBaratheon = new Character("Stannis",
                                      "Baratheon",
                                      "Zombie",
-                                     "../img/characterimages/stannisBaratheon.jpg",
+                                CHAR_IMAGE_PATH + "stannisBaratheon.jpg",
                                     8, 4, 10, 2
 );
 

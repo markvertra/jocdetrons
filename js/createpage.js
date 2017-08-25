@@ -1,16 +1,39 @@
 var player1;
 var imgSelection = 0;
-var CHAR_IMAGE_PATH = ["../GameOfThrones/img/characterimages/"];
-var CHAR_IMAGE_URLS = [CHAR_IMAGE_PATH + "northerner.jpg",
-                       CHAR_IMAGE_PATH + "lannister.jpg",
-                       CHAR_IMAGE_PATH + "toughfemale.jpg",
-                       CHAR_IMAGE_PATH + "swordwoman.jpg",
-                       CHAR_IMAGE_PATH + "femalemacer.jpg",
-                       CHAR_IMAGE_PATH + "spearknight.jpg"];
 
 $(document).ready(function(){
 
-    
+    $(".strength-setter").hover(function() {
+        $(".attribute-info").css("display", "block");
+        $(".attribute-info").text("Strength determines the power of your attacks.");
+    }, function() {
+        $(".attribute-info").css("display", "none");
+        $(".attribute-info").text("");
+    });
+
+    $(".cunning-setter").hover(function() {
+        $(".attribute-info").css("display", "block");
+        $(".attribute-info").text("Cunning determines the power of your specials.");
+    }, function() {
+        $(".attribute-info").css("display", "none");
+        $(".attribute-info").text("");
+    });
+
+    $(".stamina-setter").hover(function() {
+        $(".attribute-info").css("display", "block");
+        $(".attribute-info").text("Stamina determines your health and defence.");
+    }, function() {
+        $(".attribute-info").css("display", "none");
+        $(".attribute-info").text("");
+    });
+
+    $(".charisma-setter").hover(function() {
+        $(".attribute-info").css("display", "block");
+        $(".attribute-info").text("Charisma determines the recharge speed of your specials.");
+    }, function() {
+        $(".attribute-info").css("display", "none");
+        $(".attribute-info").text("");
+    });
 
     $(".up-btn").on("click", function(){
         var points = parseInt($(".allocated-points").text());
@@ -88,6 +111,7 @@ $(document).ready(function(){
             $(".img-one").css("background-image", "url(" + CHAR_IMAGE_URLS[imgSelection] + ")");
         }
     });
+
 });
 
 function isEmptyInput(input){
