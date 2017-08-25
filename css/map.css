@@ -5,6 +5,7 @@
     height: 800px;
     border: 50px black solid;
     text-align: center;
+    display: none;
 }
 
 .map-display {

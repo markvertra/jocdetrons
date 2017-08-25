@@ -18,16 +18,27 @@ $(document).ready(function(){
             $(this).css("display", "none");
             if ($(this).hasClass("map-event-winterfell")) {
                 player2 = ramseyBolton;
+                battleRestarter();
                 $(".location-title").text("Winterfell");
             } else if ($(this).hasClass("map-event-kings-landing")) {
                 player2 = gregorClegane;
+                battleRestarter();
                 $(".location-title").text("King's Landing");
             } else if ($(this).hasClass("map-event-casterley")) {
                 player2 = tywinLannister;
+                battleRestarter();
                 $(".location-title").text("Casterley Rock");
             } else if ($(this).hasClass("map-event-dragonstone")) {
                 player2 = stannisBaratheon;
+                battleRestarter();
                 $(".location-title").text("Dragonstone");
             }
         });
     });
+ 
+function battleRestarter(){
+    $(".player-one-name").text(player1.name + " " + player1.surname); 
+    $(".player-one-image").css("background-image", player1.image);
+    $(".player-two-name").text(player2.name + " " + player2.surname);
+    $(".player-two-image").css("background-image", player2.image);    
+}

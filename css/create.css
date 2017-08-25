@@ -17,8 +17,8 @@
 
 .creation-box {
     margin: auto;
-    margin-top: 50px;
-    height: 500px;
+    margin-top: 30px;
+    height: 520px;
     width: 80%;
     color: yellowgreen;
     background-color: rgba(0, 0, 0, 0.5);
@@ -52,6 +52,12 @@
     font-family: 'Raleway', sans-serif;
 }
 
+.creation-box select {
+    width: 140px;
+    height: 28px;
+    font-size: 0.6em;
+}
+
 
 .up-btn, .down-btn {
     height: 30px;
@@ -80,29 +86,15 @@
     padding: 0px;
 }
 
-.list-image {
+.choose-image {
     margin: 0px;
     height: 270px;
     width: 280px;
 }
 
 .img-one {
-    background-image: url("../img/northerner.jpg");
+    background-image: url("../img/characterimages/northerner.jpg");
     background-size: cover;
-}
-
-.img-two {
-    background-image: url("../img/lannister.jpg");
-    background-size: cover;
-    display: none;
-}
-
-.img-three {
-    display: none;
-}
-
-.img-four {
-    display: none;
 }
 
 .left-btn, .right-btn {

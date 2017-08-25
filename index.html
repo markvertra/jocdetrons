@@ -53,6 +53,14 @@
                     <input class="name-input" id="name" type="text"><br>
                     <label for="house">House</label>
                     <input class="house-input" id="house" type="text"><br>
+                    <label for"affiliation">Affiliation</label>
+                    <select class="affiliation-input" id="affiliation">
+                        <option value="Stark">Stark</option>
+                        <option value="Lannister">Lannister</option>
+                        <option value="Targaryen">Targaryen</option>
+                        <option value="Greyjoy">Greyjoy</option>
+                        <option value="Dorne">Dorne</option>
+                    </select><br>
                     <h4>Character Attributes</h4>
                     <div class="strength-setter setter">
                         <p class="strength">Strength: <span class="strength-value attr-val">1</span></p>
@@ -80,11 +88,7 @@
                     <div class="character-image">
                         <h4>Character Image</h4>
                             <div class="img-selector">
-                                <ul>
-                                    <li class="img-one list-image"></li>
-                                    <li class="img-two list-image"></li>
-                                    <li class="img-three list-image"></li>
-                                    <li class="img-four list-image"></li>
+                                <div class="img-one choose-image"></div>
                             </div>
                             <button class="acknowledged left-btn"><</button>
                             <button class="acknowledged right-btn">></button>
@@ -125,10 +129,12 @@
         </div>
         <div class="battlefield">
             <div class="player-one">
+                <div class="player-one-image player-img"></div>
                 <h3 class="player-one-name">Player One</h3>
             </div>
             <div class="player-two">
                 <h3 class="player-two-name">Player Two</h3>
+                <div class="player-two-image player-img"></div>
             </div>
         </div>
         <button class="battle-quit-btn acknowledged">Slither Away Like Littlefinger</button>

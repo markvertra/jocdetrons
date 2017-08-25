@@ -1,6 +1,11 @@
 * {
     box-sizing: border-box;
     font-family: 'Montez', cursive;
+     
+}
+
+button:focus {
+     outline: 0;
 }
 
 .first-section {

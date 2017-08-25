@@ -1,4 +1,12 @@
 var player1;
+var imgSelection = 0;
+var CHAR_IMAGE_PATH = ["../GameOfThrones/img/characterimages/"];
+var CHAR_IMAGE_URLS = [CHAR_IMAGE_PATH + "northerner.jpg",
+                       CHAR_IMAGE_PATH + "lannister.jpg",
+                       CHAR_IMAGE_PATH + "toughfemale.jpg",
+                       CHAR_IMAGE_PATH + "swordwoman.jpg",
+                       CHAR_IMAGE_PATH + "femalemacer.jpg",
+                       CHAR_IMAGE_PATH + "spearknight.jpg"];
 
 $(document).ready(function(){
 
@@ -49,7 +57,8 @@ $(document).ready(function(){
             $(".map-display").css("display", "block");
             player1 = new Character($(".name-input").val(),
                                     $(".house-input").val(),
-                                    "IMAGE",
+                                    $(".affiliation-input").val(),
+                                    $(".img-one").css("background-image"),
                                     parseInt($(".strength-value").text()),
                                     parseInt($(".cunning-value").text()),
                                     parseInt($(".stamina-value").text()),
@@ -61,13 +70,23 @@ $(document).ready(function(){
 
 
     $(".right-btn").on("click", function(){
-        $(".img-one").css("display", "none");
-        $(".img-two").css("display", "block");
+        if (imgSelection < CHAR_IMAGE_URLS.length - 1) {
+            imgSelection++;
+            $(".img-one").css("background-image", "url(" + CHAR_IMAGE_URLS[imgSelection] + ")");
+        } else {
+            imgSelection = 0;
+            $(".img-one").css("background-image", "url(" + CHAR_IMAGE_URLS[imgSelection] + ")");
+        }
     });
 
     $(".left-btn").on("click", function(){
-        $(".img-two").css("display", "none");
-        $(".img-one").css("display", "block");
+        if (imgSelection > 0) {
+            imgSelection--;
+            $(".img-one").css("background-image", "url(" + CHAR_IMAGE_URLS[imgSelection] + ")");
+        } else {
+            imgSelection = CHAR_IMAGE_URLS.length - 1;
+            $(".img-one").css("background-image", "url(" + CHAR_IMAGE_URLS[imgSelection] + ")");
+        }
     });
 });
 
@@ -82,6 +101,9 @@ function isEmptyInput(input){
 function createReset(){
     $(".name-input").val("");
     $(".house-input").val("");
+    $(".affiliation-input").val("");
+    imgSelection = 0;
+    $(".img-one").css("background-image", "url(" + CHAR_IMAGE_URLS[imgSelection] + ")");
     $(".strength-value").text("1");
     $(".cunning-value").text("1");
     $(".stamina-value").text("1");

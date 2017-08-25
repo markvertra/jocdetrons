@@ -4,7 +4,7 @@
     height: 800px;
     border: 50px black solid;
     text-align: center;
-    display: none;
+    display: block;
 }
 
 .battle-title-box {
@@ -34,7 +34,19 @@
 }
 
 .player-one-name, .player-two-name {
+    display: inline;
     font-size: 2em;
+}
+
+.player-img {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+}
+
+.player-one-image, .player-two-image {
+    background-image: url("../img/characterimages/goblin.jpg");
+    background-size: cover;
 }
 
 .quit-btn {
