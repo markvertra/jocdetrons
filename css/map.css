@@ -58,3 +58,32 @@
     top: 63%;
     left: 14.5%;
 }
+
+.map-event-wall {
+    position: absolute;
+    top: 6.5%;
+    left: 16.5%;
+    display: none;
+}
+
+.map-hints {
+    position: absolute;
+    background-image: url("../img/paperscrollBackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 20%;
+    left: 40%;
+    width: 650px;
+    height: 230px;
+    border: 1px solid black;
+    display: none;
+    padding: 50px 20px;
+    font-family: "raleyway", sans-serif;
+    text-align: center;
+    color: black;
+    font-size: 1.6em;
+}
+
+.map-hints-title {
+    font-size: 1.8em;
+}

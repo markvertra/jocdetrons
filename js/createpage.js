@@ -125,7 +125,7 @@ function isEmptyInput(input){
 function createReset(){
     $(".name-input").val("");
     $(".house-input").val("");
-    $(".affiliation-input").val("");
+    $(".affiliation-input").val("Stark");
     imgSelection = 0;
     $(".img-one").css("background-image", "url(" + CHAR_IMAGE_URLS[imgSelection] + ")");
     $(".strength-value").text("1");

@@ -11,10 +11,13 @@ $(document).ready(function(){
         if (battlesWon < 4) {
             $(".battle-section").css("display", "none");
             $(".map-section").css("display", "block");
+        } else if (battlesWon === 5) {
+            alert("You won!");
         } else {
-            alert("You win!");
+            $(".battle-section").css("display", "none");
+            $(".map-section").css("display", "block");
+            $(".map-event-wall").css("display", "block");
         } 
-        
     });
 
 });
