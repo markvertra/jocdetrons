@@ -5,19 +5,29 @@ $(document).ready(function(){
     
 
     $(".up-btn").on("click", function(){
-        var relevantSpan = ($(this).parent().find('span'));
-        var upper = parseInt(relevantSpan.text()) + 1;
-        $(relevantSpan).text(upper);
-        var points = parseInt($(".allocated-points").text()) + 1;
-        $(".allocated-points").text(points);
+        var points = parseInt($(".allocated-points").text());
+        if (points < 25) {
+            var relevantSpan = ($(this).parent().find('span'));
+            var upper = parseInt(relevantSpan.text()) + 1;
+            $(relevantSpan).text(upper);
+            points++;
+            $(".allocated-points").text(points);
+         } else {
+            alert("Can't pass maximum points");
+        }
     });
 
     $(".down-btn").on("click", function(){
         var relevantSpan = ($(this).parent().find('span'));
-        var downer = parseInt(relevantSpan.text()) - 1;
-        $(relevantSpan).text(downer);
-        var points = parseInt($(".allocated-points").text()) - 1;
-        $(".allocated-points").text(points);
+        var relevantPoints = parseInt(relevantSpan.text());
+        if (relevantPoints > 1) {
+            relevantPoints--;
+            $(relevantSpan).text(relevantPoints);
+            var points = parseInt($(".allocated-points").text()) - 1;
+            $(".allocated-points").text(points);
+        } else {
+            alert("Can't go below 0");
+        }
     });
 
     $(".coward-btn").on("click", function(){
