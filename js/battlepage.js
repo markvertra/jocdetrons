@@ -3,7 +3,7 @@ $(document).ready(function(){
 
 
     $(document).on("keyup", function(e) {
-        if (playerOneTimer == 0) {
+        if (playerOneTimer == 0 && battleOpen) {
             switch (e.keyCode) {
                 case 83:
                     if (playerOneAbilityOne) {
@@ -37,9 +37,11 @@ $(document).ready(function(){
     $(".battle-quit-btn").on("click", function(){
         $(".battle-section").css("display", "none");
         $(".first-section").css("display", "block");
+        battleOpen = false;
     });
 
     $(".battle-win-btn").on("click", function(){
+        battleOpen = false;
         battlesWon += 1;
         if (battlesWon < 4) {
             $(".battle-section").css("display", "none");

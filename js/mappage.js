@@ -91,5 +91,6 @@ function battleRestarter(){
     $(".player-one-health-number").text(player1.health);
     $(".player-two-name").text(player2.name + " " + player2.surname);
     $(".player-two-image").css("background-image", "url(" + player2.image + ")");
-    $(".player-two-health-number").text(player2.health);    
+    $(".player-two-health-number").text(player2.health); 
+    battleOpen = true;   
 }

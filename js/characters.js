@@ -14,6 +14,7 @@ var DEFAULT_SPECIAL = 10;
 var HEALTH_MULTIPLIER = 5;
 
 var battlesWon = 0;
+var battleOpen = false;
 
 var playerOneTimer = 0;
 var playerOneAbilityOne = true;
