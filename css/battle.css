@@ -12,7 +12,7 @@
 }
 
 .battlefield {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     margin: auto;
     width: 90%;
     height: 60%;
@@ -33,9 +33,24 @@
     text-align: right;
 }
 
-.player-one-name, .player-two-name {
-    display: inline;
+.player-one-header {
+    display: flex;
+    justify-content: flex-start;
     font-size: 2em;
+}
+
+.player-two-header {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2em;
+}
+
+.player-one-key-info, .player-two-key-info {
+    padding: 10px 20px;
+}
+
+.player-one-name, .player-two-name {
+    margin-bottom: 20px;
 }
 
 .player-img {

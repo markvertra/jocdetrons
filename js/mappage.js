@@ -39,6 +39,8 @@ $(document).ready(function(){
 function battleRestarter(){
     $(".player-one-name").text(player1.name + " " + player1.surname); 
     $(".player-one-image").css("background-image", player1.image);
+    $(".player-one-health-number").text(player1.health);
     $(".player-two-name").text(player2.name + " " + player2.surname);
-    $(".player-two-image").css("background-image", "url(" + player2.image + ")");    
+    $(".player-two-image").css("background-image", "url(" + player2.image + ")");
+    $(".player-two-health-number").text(player2.health);    
 }
