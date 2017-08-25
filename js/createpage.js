@@ -78,6 +78,7 @@ $(document).ready(function(){
             $(".create-section").css("display", "none");
             $(".map-section").css("display", "block");
             $(".map-display").css("display", "block");
+            console.log($(".affiliation-input").val());
             player1 = new Character($(".name-input").val(),
                                     $(".house-input").val(),
                                     $(".affiliation-input").val(),
@@ -85,7 +86,12 @@ $(document).ready(function(){
                                     parseInt($(".strength-value").text()),
                                     parseInt($(".cunning-value").text()),
                                     parseInt($(".stamina-value").text()),
-                                    parseInt($(".charisma-value").text())
+                                    parseInt($(".charisma-value").text()),
+                                    swordAttack,
+                                    shieldDefence,
+                                    prayer,
+                                    "DOG",
+                                    "DOG"
                 );
             createReset();
             }

@@ -1,6 +1,39 @@
 
 $(document).ready(function(){
 
+
+    $(document).on("keyup", function(e) {
+        if (playerOneTimer == 0) {
+            switch (e.keyCode) {
+                case 83:
+                    if (playerOneAbilityOne) {
+                        timerReset();
+                        cooldownBarOne();
+                    }
+                    break; 
+                case 65:
+                    if (playerOneAbilityTwo) {
+                        timerReset();
+                        cooldownBarTwo();
+                    }
+                    break;
+                case 68:
+                    if (playerOneAbilityThree) {
+                        timerReset();
+                        cooldownBarThree();
+                    }   
+                    break;
+                case 87:
+                    if (playerOneAbilityFour) {
+                        timerReset();
+                        cooldownBarFour();
+                    }
+                    break;
+            }
+        }
+
+    });
+
     $(".battle-quit-btn").on("click", function(){
         $(".battle-section").css("display", "none");
         $(".first-section").css("display", "block");
@@ -21,3 +54,72 @@ $(document).ready(function(){
     });
 
 });
+
+function timerReset() {
+    $(".timer-box-player-one").css("color", "red");
+    $(".timer-box-player-one").css("border-color", "red");
+    playerOneTimer = 3;
+    $(".timer-box-player-one").text(playerOneTimer);
+    var countdown = setInterval(function () {
+        playerOneTimer--;
+        $(".timer-box-player-one").text(playerOneTimer);
+        if (playerOneTimer == 0) {
+            clearInterval(countdown);
+        }
+        }, 1000);
+    var colorChange = setTimeout(function () {
+        $(".timer-box-player-one").css("color", "white");
+        $(".timer-box-player-one").css("border-color", "white");
+    }, 3000);
+    
+}
+
+function cooldownBarOne(cooldownTime = DEFAULT_COOLDOWN) {
+    playerOneAbilityOne = false;
+    $(".cooldown-bar-one-pone").css("background-color", "red");
+    $(".cooldown-bar-one-pone").css("width", "0px");
+    $(".cooldown-bar-one-pone").animate({width: 150}, cooldownTime);
+    
+    var barLoad = setTimeout(function() {
+    $(".cooldown-bar-one-pone").css("background-color", "blue");
+    playerOneAbilityOne = true;
+    }, cooldownTime);
+}
+
+function cooldownBarTwo(cooldownTime = DEFAULT_COOLDOWN) {
+    playerOneAbilityTwo = false;
+    $(".cooldown-bar-two-pone").css("background-color", "red");
+    $(".cooldown-bar-two-pone").css("width", "0px");
+    $(".cooldown-bar-two-pone").animate({width: 150}, cooldownTime);
+    
+    var barLoad = setTimeout(function() {
+    $(".cooldown-bar-two-pone").css("background-color", "blue");
+    playerOneAbilityTwo = true;
+    }, cooldownTime);
+}
+
+function cooldownBarThree(cooldownTime = DEFAULT_COOLDOWN) {
+    playerOneAbilityThree = false;
+    $(".cooldown-bar-three-pone").css("background-color", "red");
+    $(".cooldown-bar-three-pone").css("width", "0px");
+    $(".cooldown-bar-three-pone").animate({width: 150}, cooldownTime);
+    
+    var barLoad = setTimeout(function() {
+    $(".cooldown-bar-three-pone").css("background-color", "blue");
+    playerOneAbilityThree = true;
+    }, cooldownTime);
+}
+
+function cooldownBarFour(cooldownTime = DEFAULT_COOLDOWN) {
+    playerOneAbilityFour = false;
+    $(".cooldown-bar-four-pone").css("background-color", "red");
+    $(".cooldown-bar-four-pone").css("width", "0px");
+    $(".cooldown-bar-four-pone").animate({width: 150}, cooldownTime);
+    
+    var barLoad = setTimeout(function() {
+    $(".cooldown-bar-four-pone").css("background-color", "blue");
+    playerOneAbilityFour = true;
+    }, cooldownTime);
+}
+
+

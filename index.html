@@ -17,7 +17,7 @@
     <main class="first-section">
         <div class="title-box">
             <h1 class="game-title">Game of Thrones</h1>
-            <h2 class="game-subtitle">Zombie Warfare</h2>
+            <h2 class="game-subtitle">Qyburn's Revenge</h2>
         </div>
         <div class="instructions">
             <h5 class="instructions-title">The War Without End</h5>
@@ -141,7 +141,29 @@
                         <h3 class="player-one-name">Player One</h3>
                         <h3 class="player-one-health">Health: <span class="player-one-health-number"></span>
                     </div>
-                </div class="player-one-header">
+                </div>
+                <div class="player-one-abilities">
+                    <div class="ability-btn ability-btn-one">
+                        <h6 class="ability-one"><span class="key-text">S </span><span class="ability-name">Ability One</span></h6>
+                        <div class="cooldown-bar cooldown-bar-one-pone"></div>
+                    </div>
+                    <div class="ability-btn ability-btn-two">
+                        <h6 class="ability-two"><span class="key-text">A  </span><span class="ability-name">Ability Two</span></h6>
+                        <div class="cooldown-bar cooldown-bar-two-pone"></div>
+                    </div>
+                    <div class="ability-btn ability-btn-three">
+                        <h6 class="ability-three"><span class="key-text">D  </span><span class="ability-name">Ability Three</span></h6>
+                        <div class="cooldown-bar cooldown-bar-three-pone"></div>
+                    </div>
+                    <div class="ability-btn special-ability-btn">
+                        <h6 class="special-ability"><span class="key-text">W  </span><span class="ability-name">Special Ability</span></h6>
+                        <div class="cooldown-bar cooldown-bar-four-pone"></div>
+                    </div>
+                </div>
+                <div class="timer-box timer-box-player-one">0
+                </div>
+            </div>
+            <div class="battle-info-box">
             </div>
             <div class="player-two">
                 <div class="player-two-header">
@@ -150,6 +172,27 @@
                         <h3 class="player-two-health">Health: <span class="player-two-health-number"></span>
                     </div>
                     <div class="player-two-image player-img"></div>
+                </div>
+                <div class="player-two-abilities">
+                    <div class="ability-btn ability-btn-one">
+                        <h6 class="ability-one">Ability One</h6>
+                        <div class="cooldown-bar cooldown-bar-one"></div>
+                    </div>
+                    <div class="ability-btn ability-btn-two">
+                        <h6 class="ability-two">Ability Two</h6>
+                        <div class="cooldown-bar cooldown-bar-two"></div>
+                    </div>
+                    <div class="ability-btn ability-btn-three">
+                        <h6 class="ability-three">Ability Three</h6>
+                        <div class="cooldown-bar cooldown-bar-three"></div>
+                    </div>
+                    <div class="ability-btn special-ability-btn">
+                        <h6 class="special-ability">Special Ability</h6>
+                        <div class="cooldown-bar cooldown-bar-four"></div>
+                    </div>
+                </div> 
+                <div class="thin-bar"></div>
+                <div class="timer-box timer-box-player-two">0
                 </div>
             </div>
         </div>
@@ -162,6 +205,7 @@
     <script src="js/createpage.js"></script>
     <script src="js/mappage.js"></script>
     <script src="js/battlepage.js"></script>
+    <script src="js/abilities.js"></script>
     <script src="js/characters.js"></script>
 </body>
 </html>
