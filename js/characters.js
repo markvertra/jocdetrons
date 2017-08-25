@@ -5,6 +5,7 @@ var CHAR_IMAGE_URLS = [CHAR_IMAGE_PATH + "northerner.jpg",
                        CHAR_IMAGE_PATH + "swordwoman.jpg",
                        CHAR_IMAGE_PATH + "femalemacer.jpg",
                        CHAR_IMAGE_PATH + "spearknight.jpg"];
+var battlesWon = 0;
 
 function Character(name, surname, affiliation, image, strength, cunning, stamina, charisma) {
     this.name = name;
@@ -47,4 +48,10 @@ var stannisBaratheon = new Character("Stannis",
                                 CHAR_IMAGE_PATH + "stannisBaratheon.jpg",
                                     8, 4, 10, 2
 );
+
+var nightKing = new Character("Night",
+                              "King",
+                              "Zombie",
+                                CHAR_IMAGE_PATH + "nightking.jpg",
+                                    10, 10, 10, 10);
 

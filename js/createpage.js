@@ -61,7 +61,7 @@ $(document).ready(function(){
         }
     });
 
-    $(".coward-btn").on("click", function(){
+    $(".create-quit-btn").on("click", function(){
         $(".create-section").css("display", "none");
         $(".first-section").css("display", "block");
     });

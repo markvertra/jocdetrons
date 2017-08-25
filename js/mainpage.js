@@ -19,4 +19,7 @@ $(document).ready(function(){
         popUp.css("display", "none");
     });
 
+    $(".quit-btn").on("click", function() {
+        battlesWon = 0;
+    });
 });
