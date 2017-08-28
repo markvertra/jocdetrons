@@ -38,11 +38,13 @@ $(document).ready(function(){
         $(".battle-section").css("display", "none");
         $(".first-section").css("display", "block");
         battleOpen = false;
+        healthResetter();
     });
 
     $(".battle-win-btn").on("click", function(){
         battleOpen = false;
         battlesWon += 1;
+        healthResetter();
         if (battlesWon < 4) {
             $(".battle-section").css("display", "none");
             $(".map-section").css("display", "block");
@@ -124,4 +126,7 @@ function cooldownBarFour(cooldownTime = DEFAULT_COOLDOWN) {
     }, cooldownTime);
 }
 
-
+function healthResetter() {
+    player1.currentHealth = player1.health;
+    player2.currentHealth = player2.health;
+}

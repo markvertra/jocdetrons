@@ -16,10 +16,6 @@ $(document).ready(function(){
         $(".map-event").on("click", function(){
             $(".map-section").css("display", "none");
             $(".battle-section").css("display", "block");
-            $(".ability-one .ability-name").text(player1.abilityOne.name);
-            $(".ability-two .ability-name").text(player1.abilityTwo.name);
-            $(".ability-three .ability-name").text(player1.abilityThree.name);
-            $(".special-ability .ability-name").text(player1.specialAttack.name);
             $(this).css("display", "none");
             if ($(this).hasClass("map-event-winterfell")) {
                 player2 = ramseyBolton;
@@ -45,43 +41,33 @@ $(document).ready(function(){
         });
 
         $(".map-event-winterfell").hover(function() {
-            $(".map-hints").css("display", "block");
-            $(".map-hints").text("Qyburn has resurrected the wicked Ramsey Bolton outside the gates of Winterfell. Bolton has made a cloak out of the Maester's skin and kidnapped the Master-at-Arms. Slay this vile beast.");
+            mapOpener("Winterfell");
         }, function() {
-            $(".map-hints").css("display", "none");
-            $(".map-hints").text("");
+            mapCloser();
         });
 
         $(".map-event-casterley").hover(function() {
-            $(".map-hints").css("display", "block");
-            $(".map-hints").text("Qyburn has resurrected the dastardly Tywin Lannister inside Casterley Rock. Lannister has summoned an army of zombie soliders and plans to conquer the 7 Kingdoms. Kill him before it is too late.");
+            mapOpener("Casterley Rock");
         }, function() {
-            $(".map-hints").css("display", "none");
-            $(".map-hints").text("");
+            mapCloser();
         });
 
         $(".map-event-kings-landing").hover(function() {
-            $(".map-hints").css("display", "block");
-            $(".map-hints").text("Qyburn has resurrected the Mountain-That-Rides (again). Gregor Clegane is slaying the peasants in the streets, burning houses down and wreaking chaos. Can you defeat this monster?");
+            mapOpener("King's Landing");
         }, function() {
-            $(".map-hints").css("display", "none");
-            $(".map-hints").text("");
+            mapCloser();
         });
 
         $(".map-event-dragonstone").hover(function() {
-            $(".map-hints").css("display", "block");
-            $(".map-hints").text("Qyburn has resurrected Stannis Baratheon. Baratheon is convinced he is the true ruler of Westeros and working alongside Melisandre, has cursed all his rivals. Stop him, now!");
+            mapOpener("Dragonstone");
         }, function() {
-            $(".map-hints").css("display", "none");
-            $(".map-hints").text("");
+            mapCloser();
         });
 
         $(".map-event-wall").hover(function() {
-            $(".map-hints").css("display", "block");
-            $(".map-hints").text("Qyburn has resurrected the Night King, the greatest ever threat to Westeros. Before he leads his army of undead south, you must stop him in his tracks and secure peace, forever.");
+            mapOpener("Beyond The Wall");
         }, function() {
-            $(".map-hints").css("display", "none");
-            $(".map-hints").text("");
+            mapCloser();
         });
     });
  
@@ -92,5 +78,24 @@ function battleRestarter(){
     $(".player-two-name").text(player2.name + " " + player2.surname);
     $(".player-two-image").css("background-image", "url(" + player2.image + ")");
     $(".player-two-health-number").text(player2.health); 
+    $(".player-one-abilities .ability-one .ability-name").text(player1.abilityOne.name);
+    $(".player-one-abilities .ability-two .ability-name").text(player1.abilityTwo.name);
+    $(".player-one-abilities .ability-three .ability-name").text(player1.abilityThree.name);
+    $(".player-one-abilities .special-ability .ability-name").text(player1.specialAttack.name);
+    $(".player-two-abilities .ability-one").text(player2.abilityOne.name);
+    $(".player-two-abilities .ability-two").text(player2.abilityTwo.name);
+    $(".player-two-abilities .ability-three").text(player2.abilityThree.name);
+    $(".player-two-abilities .special-ability").text(player2.specialAttack.name);
+    
     battleOpen = true;   
+}
+
+function mapOpener(location){
+    $(".map-hints").css("display", "block");
+    $(".map-hints").text(EVENT_TEXTS[location]);
+}
+
+function mapCloser() {
+    $(".map-hints").css("display", "none");
+    $(".map-hints").text("");
 }
