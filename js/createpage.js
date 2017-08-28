@@ -44,7 +44,8 @@ $(document).ready(function(){
             points++;
             $(".allocated-points").text(points);
          } else {
-            alert("Can't pass maximum points");
+            flashRed(".allocated-points", "white"); 
+            flashRed(".max-points", "white");
         }
     });
 
@@ -57,7 +58,7 @@ $(document).ready(function(){
             var points = parseInt($(".allocated-points").text()) - 1;
             $(".allocated-points").text(points);
         } else {
-            alert("Can't go below 0");
+            flashRed(relevantSpan, "#9ACD32");
         }
     });
 
@@ -139,4 +140,12 @@ function createReset(){
     $(".stamina-value").text("1");
     $(".charisma-value").text("1");
     $(".allocated-points").text("4");
+}
+
+
+function flashRed(element, originalColor, time=1000) {
+    $(element).css("color", "red");
+    setTimeout(function() {
+    $(element).css("color", originalColor);
+   }, time);
 }
