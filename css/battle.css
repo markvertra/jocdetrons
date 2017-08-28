@@ -107,6 +107,8 @@
     float: right;
 }
 
+
+
 .timer-box {
     height: 70px;
     width: 160px;
@@ -120,4 +122,8 @@
 
 .timer-box-player-two {
     float: right;
+}
+
+.battle-win-btn {
+    display: none;   
 }

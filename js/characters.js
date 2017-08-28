@@ -10,7 +10,7 @@ var DEFAULT_COOLDOWN = 7000;
 var DEFAULT_ATTACK = 20;
 var DEFAULT_HEALTH = 100;
 var DEFAULT_DEFENCE = 10;
-var DEFAULT_SPECIAL = 10;
+var DEFAULT_SPECIAL = 30;
 var HEALTH_MULTIPLIER = 5;
 
 var battlesWon = 0;
@@ -45,9 +45,9 @@ function Character(name, surname, affiliation, image, strength, cunning, stamina
     this.health = DEFAULT_HEALTH + this.stamina * HEALTH_MULTIPLIER;
     this.currentHealth = this.health;
 
-    this.attack = DEFAULT_ATTACK;
-    this.specialAttack = DEFAULT_SPECIAL;
-    this.defence = DEFAULT_DEFENCE;
+    this.attack = DEFAULT_ATTACK + strength;
+    this.special = DEFAULT_SPECIAL + cunning;
+    this.defence = DEFAULT_DEFENCE + stamina;
     this.cooldownTime = DEFAULT_COOLDOWN - 150 * this.charisma;
 
     this.abilityOne = abilityOne;

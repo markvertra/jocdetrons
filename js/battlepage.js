@@ -9,24 +9,28 @@ $(document).ready(function(){
                     if (playerOneAbilityOne) {
                         timerReset();
                         cooldownBarOne();
+                        attack(player1, player2);
                     }
                     break; 
                 case 65:
                     if (playerOneAbilityTwo) {
                         timerReset();
                         cooldownBarTwo();
+                        defenceBoost(player1);
                     }
                     break;
                 case 68:
                     if (playerOneAbilityThree) {
                         timerReset();
                         cooldownBarThree();
+                        prayer(player1);
                     }   
                     break;
                 case 87:
                     if (playerOneAbilityFour) {
                         timerReset();
                         cooldownBarFour();
+                        specialAttack(player1, player2);
                     }
                     break;
             }
