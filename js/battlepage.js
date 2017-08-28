@@ -133,4 +133,5 @@ function cooldownBarFour(cooldownTime = DEFAULT_COOLDOWN) {
 function healthResetter() {
     player1.currentHealth = player1.health;
     player2.currentHealth = player2.health;
+    $(".battle-text").text("");
 }

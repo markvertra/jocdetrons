@@ -31,8 +31,14 @@
 
 .battle-info-box {
     width: 33%;
-    height: 90%;
+    height: 100%;
     text-align: center;
+    border: 3px groove black;
+    background-image: url("../img/paperscrollBackground.jpg");
+    padding: 20px;
+    color: black;
+    font-family: "raleway", sans-serif;
+    font-size: 2em;
 }
 
 .player-two {
@@ -43,6 +49,11 @@
     display: flex;
     justify-content: flex-start;
     font-size: 2em;
+}
+
+.battle-text {
+    margin-top: 10px;
+    font-size: 0.6em;
 }
 
 .player-two-header {
