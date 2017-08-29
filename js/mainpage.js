@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    document.querySelector(".reins").play();
+
     $(".play-button").on("click", function(){
         $(".first-section").css("display", "none");
         $(".create-section").css("display", "block");

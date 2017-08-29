@@ -14,7 +14,7 @@ button:focus {
     height: 800px;
     border: 50px black solid;
     text-align: center;
-    display: none;
+    display: none; 
 }
 
 .title-box {
