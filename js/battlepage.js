@@ -41,6 +41,7 @@ $(document).ready(function(){
     $(".battle-quit-btn").on("click", function(){
         $(".battle-section").css("display", "none");
         $(".first-section").css("display", "block");
+        $(".game-over").css("display", "none");
         battleOpen = false;
         healthResetter();
     });
@@ -49,6 +50,7 @@ $(document).ready(function(){
         battleOpen = false;
         battlesWon += 1;
         healthResetter();
+        $(".battle-won").css("display", "none");
         if (battlesWon < 4) {
             $(".battle-section").css("display", "none");
             $(".map-section").css("display", "block");
@@ -134,4 +136,9 @@ function healthResetter() {
     player1.currentHealth = player1.health;
     player2.currentHealth = player2.health;
     $(".battle-text").text("");
+}
+
+function updateScroll(){
+    var element = document.querySelector(".battle-info-box");
+    element.scrollTop = element.scrollHeight;
 }

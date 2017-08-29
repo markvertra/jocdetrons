@@ -39,6 +39,7 @@
     color: black;
     font-family: "raleway", sans-serif;
     font-size: 2em;
+    overflow: scroll;
 }
 
 .player-two {
@@ -51,10 +52,15 @@
     font-size: 2em;
 }
 
+.player-text li {
+    margin-top: 10px;
+}
+
 .battle-text {
     margin-top: 10px;
     font-size: 0.6em;
 }
+
 
 .player-two-header {
     display: flex;

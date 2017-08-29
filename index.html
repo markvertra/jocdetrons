@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/create.css">
     <link rel="stylesheet" href="css/map.css">
     <link rel="stylesheet" href="css/battle.css">
+    <link rel="stylesheet" href="css/gameover.css">
+    <link rel="stylesheet" href="css/training.css">
     <link href="https://fonts.googleapis.com/css?family=Montez" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <title>Fantasy Game of Thrones</title>
@@ -126,6 +128,42 @@
         <div class="map-hints">
             <h4 class="map-hints-title"></h4>
         </div>
+        <div class="stats-screen">
+            <div class="stats-container">
+                <div class="stats-left">
+                    <div class="stats-image">
+                    </div>
+                    <div class="stats-list">
+                        <ul>
+                            <li class="stats-fullname">Name: <span></span></li>
+                            <li class="stats-affiliation">Affiliation: <span></span></li>
+                            <li class="stats-health">Health: <span></span></li>
+                            <li class="stats-attack">Attack: <span></span></li>
+                            <li class="stats-defence">Defence: <span></span></li>
+                            <li class="stats-special">Special: <span></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="stats-right">
+                    <div class="play-facts">
+                        <ul>
+                            <li class="stats-enemies-defeated">Enemies defeated: <span></span></li>
+                            <li class="stats-specials-used">Specials used: <span></span></li>
+                            <li class="times-trained">Times trained: <span></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="return-to-map-btn acknowledged">
+                    Return to Map
+                </div>
+                <div class="map-train-btn acknowledged">
+                    Train with the Master of Arms
+                </div>
+            </div>
+        </div>
+        <div class="acknowledged display-stats-btn">
+            View Stats
+        </div>
     </main>
 
     <main class="battle-section">
@@ -165,7 +203,9 @@
             </div>
             <div class="battle-info-box">
                 <h3 class="opening-message">Battle Info</h3>
-                <p><span class=battle-text></span></p>
+                <div class="player-text">
+                    <ul class="battle-text"></ul>
+                </div>
             </div>
             <div class="player-two">
                 <div class="player-two-header">
@@ -178,19 +218,15 @@
                 <div class="player-two-abilities">
                     <div class="ability-btn ability-btn-one">
                         <h6 class="ability-one">Ability One</h6>
-                        <div class="cooldown-bar cooldown-bar-one"></div>
                     </div>
                     <div class="ability-btn ability-btn-two">
                         <h6 class="ability-two">Ability Two</h6>
-                        <div class="cooldown-bar cooldown-bar-two"></div>
                     </div>
                     <div class="ability-btn ability-btn-three">
                         <h6 class="ability-three">Ability Three</h6>
-                        <div class="cooldown-bar cooldown-bar-three"></div>
                     </div>
                     <div class="ability-btn special-ability-btn">
                         <h6 class="special-ability">Special Ability</h6>
-                        <div class="cooldown-bar cooldown-bar-four"></div>
                     </div>
                 </div> 
                 <div class="thin-bar"></div>
@@ -202,6 +238,49 @@
         <button class="battle-quit-btn quit-btn acknowledged">Slither Away Like Littlefinger</button>
     </main>
 
+    <main class="game-over">
+        <div class="game-over-box">
+            <h3 class="game-over-text">Game Over<br><br>The evil Qyburn has won. Westeros is doomed forever.</h3>
+        </div>
+    </main>
+
+    <main class="battle-won">
+        <div class="you-won-box">
+                <h3 class="you-won-text">You Win!<br><br>Keep battling until Westeros is safe.</h3>
+        </div>
+    </main>
+
+    <main class="training-section">
+        <div class="training-instructions-container">
+            <h4>Train by Slapping Joffrey</h4>
+            <p>Qyburn has also resurrected the irritating King Joffrey. However, Joffrey has been trapped in the Iron Throne Room, and in order to strengthen yourself, you can train and get stronger by slapping him.</p>
+            <div class="acknowledged training-continue-btn">Please let me slap him</div>
+        </div>
+        <div class="training-field">
+            <div class="training-area">
+                <div class="joffrey-face">
+                </div>
+                <div class="goodie-face">
+                </div>
+            </div>
+            <div class="training-hud">
+                <div class="hud-bar slapped-counter">
+                    <h3>Times Joffrey slapped:<br><span class="joffrey-slaps-text">0</span></h3>
+                </div>
+                <div class="hud-bar bad-slapped-counter">
+                    <h3>Good guys slapped:<br><span class="goodie-slaps-text">0</span></h3>
+                </div>
+                <div class="hud-bar time-left">
+                    <h3>Time left:<br><span class="training-time-left"></span></h3> 
+                </div>
+                <div class="hud-bar training-quit">
+                    <div class="training-quit-btn acknowledged">Quit Training</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/mainpage.js"></script>
     <script src="js/createpage.js"></script>
@@ -210,5 +289,7 @@
     <script src="js/abilities.js"></script>
     <script src="js/characters.js"></script>
     <script src="js/battlelogic.js"></script>
+    <script src="js/training.js"></script>
+    <script src="js/traininglogic.js"></script>
 </body>
 </html>

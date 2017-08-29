@@ -5,7 +5,7 @@
     height: 800px;
     border: 50px black solid;
     text-align: center;
-   /* display: none; */
+    display: none;
 }
 
 .map-display {
@@ -86,4 +86,50 @@
 
 .map-hints-title {
     font-size: 1.8em;
+}
+
+.display-stats-btn {
+    position: absolute;
+    top: 8%;
+    left: 70%;
+    width: 200px;
+    display: none;
+}
+
+.stats-screen {
+    position: absolute;
+    top: 7%;
+    left: 10%;
+    background-image: url("../img/paperscrollBackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80%;
+    width: 80%;
+    display:none;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 60px;
+    font-family: "raleway", sans-serif;
+}
+
+.stats-left, .stats-right {
+    width: 50%;
+    font-size: 1.6em;
+    line-height: 2em;
+}
+
+.return-to-map-btn {
+    position: absolute;
+    bottom: 10%;
+    left: 32%;
+}
+
+.map-train-btn {
+    position: absolute;
+    bottom: 10%;
+    left: 50%
 }

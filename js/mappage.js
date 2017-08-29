@@ -1,4 +1,5 @@
 var player2;
+var trainingGame;
 
 $(document).ready(function(){    
 
@@ -11,6 +12,24 @@ $(document).ready(function(){
             $(".map-display").css("display", "none");
             $(".map-event").css("display", "block");
             $(".map-event-wall").css("display", "none");
+            $(".display-stats-btn").css("display", "block");
+        });
+
+        $(".display-stats-btn").on("click", function() {
+            $(".stats-screen").css("display", "block");
+            $(".display-stats-btn").css("display", "none");
+        });
+
+        $(".map-train-btn").on("click", function() {
+            $(".map-section").css("display", "none");
+            $(".training-section").css("display", "block");
+            $(".training-instructions-container").css("display", "block");
+            trainingGame = new TrainingGame();
+        });
+
+        $(".return-to-map-btn").on("click", function() {
+            $(".stats-screen").css("display", "none");
+            $(".display-stats-btn").css("display", "block");
         });
 
         $(".map-event").on("click", function(){
@@ -19,6 +38,9 @@ $(document).ready(function(){
             $(".player-one").css("display", "block");
             $(".player-two").css("display", "block");
             $(this).css("display", "none");
+            setTimeout( function () {
+                AI();
+            }, 1000);
             if ($(this).hasClass("map-event-winterfell")) {
                 player2 = ramseyBolton;
                 battleRestarter();
