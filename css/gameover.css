@@ -1,0 +1,25 @@
+.game-over, .battle-won {
+    background-image: url("../img/medievalBackground.jpg");
+    background-repeat: no-repeat;
+    height: 800px;
+    border: 50px black solid;
+    text-align: center;
+    display: none;
+}
+
+.game-over-box, .battle-won-box {
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: auto;
+    width: 90%;
+    height: 60%;
+    margin-top: 2%;
+    color: yellowgreen;
+    padding: 20px;
+    font-family: "raleway", sans-serif;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+
+
+

@@ -1,0 +1,91 @@
+.training-section {
+    background-image: url("../img/redKeep.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    border: 50px black solid;
+    text-align: center;
+    display: block;
+}
+
+.training-instructions-container {
+    background-color: rgba(0,0,0,0.7);
+    padding: 100px 220px;
+    text-align: center;
+    height: 100%;
+    font-family: "raleway", sans-serif;
+    color: yellowgreen;
+}
+
+.training-instructions-container p {
+    line-height: 2.2em;
+    font-size: 2em;
+    margin-top: 30px 0px;
+}
+
+.training-instructions-container h4 {
+    font-size: 3em;
+    margin-bottom: 50px;
+}
+
+.training-continue-btn {
+    color: black; 
+    width: 300px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.training-field {
+    display: none;
+}
+
+.training-area {
+    position: relative;
+    height: 600px;
+    width: 100%;
+    cursor: url("../img/slaphand.jpg"), crosshair;
+}
+
+.joffrey-face {
+    position: absolute;
+    background-image: url("../img/training/joffreyFace.gif");
+    height: 120px;
+    width: 90px;
+    background-size: cover;
+    display: none;
+
+}
+
+.goodie-face {
+    position: absolute;
+    left: 70%;
+    background-image: url("../img/training/samFace.gif");
+    height: 120px;
+    width: 90px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: none;
+}
+
+.training-hud {
+    background-color: rgba(0,0,0,0.7);
+    color: yellowgreen;
+    height: 150px;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: "raleway", sans-serif;
+}
+
+.training-hud span {
+    font-size: 2em;
+}
+
+.hud-bar {
+    width: 25%;
+    padding: 15px;
+}
+
+.hud-bar h3 {
+    font-size: 1.5em;
+}
