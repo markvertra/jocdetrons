@@ -1,6 +1,7 @@
 
 function attack(attacker, defender){
     attackPower = attacker.attack - defender.defence;
+    document.querySelector(".sword-attack").play();
     if (attackPower > 0) {
         defender.currentHealth -= attackPower;
         healthCheck();
@@ -11,6 +12,7 @@ function attack(attacker, defender){
 }
 
 function defenceBoost(attacker){
+    document.querySelector(".shields").play();
     attacker.defence *= 1.5;
     setTimeout(function(){
         attacker.defence *= (2 / 3);
@@ -19,6 +21,7 @@ function defenceBoost(attacker){
 }
 
 function prayer(attacker){
+    document.querySelector(".night-is-dark").play();
     attacker.attack *= 1.5;
     setTimeout(function(){
         attacker.attack *= (2 / 3);
@@ -71,25 +74,25 @@ function AI() {
         switch (num) {
             case (0):
                 attack(player2, player1);
-                if (!healthCheck()) {
+                if (!healthCheck() || !battleOpen) {
                     clearInterval(mover);
                 }
                 break;
             case (1):
                 defenceBoost(player2);
-                if (!healthCheck()) {
+                if (!healthCheck() || !battleOpen) {
                     clearInterval(mover);
                 }
                 break;
             case (2):
                 prayer(player2);
-                if (!healthCheck()) {
+                if (!healthCheck() || !battleOpen) {
                     clearInterval(mover);
                 }
                 break;
             case (3):
                 specialAttack(player2, player1);
-                if (!healthCheck()) {
+                if (!healthCheck() || !battleOpen) {
                     clearInterval(mover);
                 }
                 break;

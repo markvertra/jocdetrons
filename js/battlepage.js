@@ -43,7 +43,7 @@ $(document).ready(function(){
         $(".first-section").css("display", "block");
         $(".game-over").css("display", "none");
         battleOpen = false;
-        document.querySelector(".fear-and-blood").play();
+        document.querySelector(".death").play();
         healthResetter();
     });
 

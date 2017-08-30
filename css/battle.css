@@ -144,3 +144,7 @@
 .battle-win-btn {
     display: none;   
 }
+
+.battle-quit-btn {
+    display: none;
+}
