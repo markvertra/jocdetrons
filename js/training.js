@@ -13,12 +13,14 @@ $(document).ready(function(){
         $(".training-time-left").text(trainingGame.time);
         joffreyAutomated();
         goodieAutomated();
+        trainingTimer();
     });
 
     $(".training-quit-btn").on("click", function() {
         $(".training-section").css("display", "none");
         $(".training-field").css("display", "none");
         $(".map-section").css("display", "block");
+        $(".training-quit-btn").text("Quit Training");
     });
 
     $(".joffrey-face").on("click", function() {
@@ -30,7 +32,8 @@ $(document).ready(function(){
         document.querySelector(".slap").play();
         $(".joffrey-slaps-text").text(trainingGame.joffreySlaps);
         if (trainingGame._winChecker()) {
-
+            $(".training-quit-btn").text("Boost Stats");
+            $(".training-time-left").text("You win!");
         }
         setTimeout( function() {
             document.querySelector(".i-am-the-king").play();
@@ -77,10 +80,10 @@ function goodieTimer () {
 
 function joffreyAutomated () {
     var joffreyAuto = setInterval(function () {
-    if (trainingGame.timeLeft == 0) {
+    if (trainingGame.time == 0) {
         clearInterval(joffreyAuto);
     } else if ($(".joffrey-face").css("display") == "none") {
-            if (Math.random() > 0.8) {
+            if (Math.random() > 0.6) {
                 positionRandomiser(".joffrey-face");
                 joffreyTimer();
                 
@@ -91,7 +94,7 @@ function joffreyAutomated () {
 
 function goodieAutomated () {
     var goodieAuto = setInterval(function () {
-        if (trainingGame.timeLeft == 0) {
+        if (trainingGame.time == 0) {
             clearInterval(goodieAuto);
         } else if ($(".goodie-face").css("display") == "none") {
                 if (Math.random() > 0.8) {
@@ -105,4 +108,18 @@ function goodieAutomated () {
 function positionRandomiser (item) {
    $(item).css("left", Math.random() * 90 + "%");
    $(item).css("top", Math.random() * 80 + "%");
+}
+
+function trainingTimer () {
+    var timeLeft = setInterval( function() {
+    if (trainingGame.time == 0) {
+        $(".training-time-left").text("Time up");
+        clearInterval(timeLeft);
+    } else if (trainingGame._winChecker()) {
+        $(".training-time-left").text("You win!");
+        clearInterval(timeLeft);
+    } else {
+        trainingGame.time--;
+        $(".training-time-left").text(trainingGame.time);
+        }}, 1000);
 }

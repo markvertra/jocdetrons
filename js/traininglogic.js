@@ -28,7 +28,7 @@ function TrainingGame(winNum=10, difficulty=battlesWon) {
     };
 
     this.difficulty = 5 - difficulty;
-    this.time = this.difficulty * 15;
+    this.time = this.difficulty * 10;
     this.timePerJoffrey = this.time / (10 + this.difficulty * 2);
     this.timePerGoodie = this.time / (20 - this.difficulty * 3);
     this.timeLeft = this.time;
