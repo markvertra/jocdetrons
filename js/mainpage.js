@@ -19,6 +19,22 @@ $(document).ready(function(){
         popUp.css("display", "none");
     });
 
+    $(".music-up-btn").on("click", function() {
+        document.querySelector(".reins").volume += 0.1;
+    });
+
+    $(".music-down-btn").on("click", function() {
+        document.querySelector(".reins").volume -= 0.1;
+    });
+
+    $(".options-button").on("click", function() {
+        $(".options").css("display", "block");
+    });
+
+    $(".options-quit-btn").on("click", function() {
+        $(".options").css("display", "none");
+    });
+
     $(".quit-btn").on("click", function() {
         battlesWon = 0;
     });

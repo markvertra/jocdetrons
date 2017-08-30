@@ -52,7 +52,7 @@ button:focus {
     font-family: 'Raleway', sans-serif;
 }
 
-.instructions {
+.instructions, .options {
     font-size: 1.8em;
     position: absolute;
     padding: 50px;
@@ -67,7 +67,7 @@ button:focus {
 
 }
 
-.instructions-title {
+.instructions-title, .options-title {
     font-size: 2em;
     font-family: 'Raleway', sans-serif;
     margin-bottom: 30px;
@@ -77,6 +77,10 @@ button:focus {
     font-size: 1.3em;
     font-family: 'Raleway', sans-serif;
 
+}
+
+.options-text {
+    line-height: 2em;
 }
 
 .acknowledged {

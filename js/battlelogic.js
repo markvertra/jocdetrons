@@ -32,6 +32,7 @@ function prayer(attacker){
 function specialAttack(attacker, defender){
     attacker.specialsUsed++;
     attackPower = attacker.special - defender.defence; 
+    document.querySelector(attacker.specialAttack["soundEffect"]).play();
     if (attackPower > 0) {
         defender.currentHealth -= attackPower;
         $(".battle-text").append("<li>" + attacker.name + " " + attacker.surname + " has damaged " + defender.name + " " + defender.surname + " for " + attackPower + " points of special damage.</li>");
@@ -66,7 +67,7 @@ function healthCheck(attacker){
 }
 
 function randomMoveSelector() {
-   return Math.floor(Math.random());
+   return Math.floor(Math.random() * 4);
 }
 
 function AI() {
