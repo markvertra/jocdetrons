@@ -13,7 +13,10 @@ var DEFAULT_DEFENCE = 10;
 var DEFAULT_SPECIAL = 30;
 var HEALTH_MULTIPLIER = 5;
 
+var enemiesDefeated = 0;
 var battlesWon = 0;
+var timesTrained = 0;
+
 var battleOpen = false;
 
 var playerOneTimer = 0;
@@ -55,6 +58,11 @@ function Character(name, surname, affiliation, image, strength, cunning, stamina
     this.abilityThree = abilityThree;
     this.specialAttack = specialAbilityOne;
     this.specialAttackUpgrade = specialAbilityTwo;
+
+    this.specialsUsed = 0;
+    this.enemiesDefeated = 0;
+    this.battlesWon = 0;
+    this.timesTrained = 0;
 }
 
 var ramseyBolton = new Character("Ramsey",

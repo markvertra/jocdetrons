@@ -27,6 +27,8 @@ $(document).ready(function(){
             $(".training-section").css("display", "block");
             $(".training-instructions-container").css("display", "block");
             $(".map-train-btn").css("display", "none");
+            player1.timesTrained++;
+            statsFiller();
             trainingGame = new TrainingGame();
         });
 
@@ -36,6 +38,7 @@ $(document).ready(function(){
         });
 
         $(".map-event").on("click", function(){
+            document.querySelector(".i-choose-violence").play()
             $(".map-section").css("display", "none");
             $(".battle-section").css("display", "block");
             $(".player-one").css("display", "block");

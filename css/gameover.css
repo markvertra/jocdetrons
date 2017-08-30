@@ -1,4 +1,4 @@
-.game-over, .battle-won {
+.game-over, .battle-won, .game-won {
     background-image: url("../img/medievalBackground.jpg");
     background-repeat: no-repeat;
     height: 800px;

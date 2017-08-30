@@ -49,19 +49,25 @@ $(document).ready(function(){
 
     $(".battle-win-btn").on("click", function(){
         battleOpen = false;
-        battlesWon += 1;
+        player1.battlesWon++;
+        player1.enemiesDefeated++;
         healthResetter();
         $(".battle-won").css("display", "none");
         $(".map-train-btn").css("display", "block");
-        if (battlesWon < 4) {
+        statsFiller();
+        if (player1.battlesWon < 4) {
             $(".battle-section").css("display", "none");
             $(".map-section").css("display", "block");
-        } else if (battlesWon === 5) {
-            alert("You won!");
+            document.querySelector(".we-have-won").play();
+        } else if (player1.battlesWon === 5) {
+            document.querySelector(".drink").play();
+            $(".battle-section").css("display", "none");
+            $(".game-won").css("display", "block");
         } else {
             $(".battle-section").css("display", "none");
             $(".map-section").css("display", "block");
             $(".map-event-wall").css("display", "block");
+            document.querySelector(".we-have-won").play();
         } 
     });
 

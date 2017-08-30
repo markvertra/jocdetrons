@@ -30,6 +30,7 @@ function prayer(attacker){
 }
 
 function specialAttack(attacker, defender){
+    attacker.specialsUsed++;
     attackPower = attacker.special - defender.defence; 
     if (attackPower > 0) {
         defender.currentHealth -= attackPower;
@@ -101,4 +102,3 @@ function AI() {
     
 
 }
-

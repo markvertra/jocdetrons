@@ -114,6 +114,10 @@
     display:none;
 }
 
+.stats-screen span {
+    color: white;
+}
+
 .stats-container {
     display: flex;
     justify-content: space-between;
@@ -121,6 +125,8 @@
     padding: 60px;
     font-family: "raleway", sans-serif;
 }
+
+
 
 .stats-left, .stats-right {
     width: 50%;
@@ -131,7 +137,7 @@
 .return-to-map-btn {
     position: absolute;
     bottom: 10%;
-    left: 32%;
+    left: 40%;
 }
 
 

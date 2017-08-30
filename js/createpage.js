@@ -96,6 +96,7 @@ $(document).ready(function(){
                                     AFFILIATION_ABILITY[$(".affiliation-input").val()],
                                     AFFILIATION_ABILITY2[$(".affiliation-input").val()]
                 );
+            statsFiller();
             createReset();
             }
         });  
@@ -151,3 +152,16 @@ function flashRed(element, originalColor, time=1000) {
     $(element).css("color", originalColor);
    }, time);
 }
+
+function statsFiller() {
+    $(".stats-fullname-text").text(player1.name + " " + player1.surname);
+    $(".stats-affiliation-text").text(player1.affiliation);
+    $(".stats-health-text").text(player1.health);
+    $(".stats-attack-text").text(player1.attack);
+    $(".stats-defence-text").text(player1.defence);
+    $(".stats-special-text").text(player1.special);
+    $(".stats-enemies-defeated-text").text(player1.enemiesDefeated);
+    $(".stats-specials-used-text").text(player1.specialsUsed);
+    $(".stats-times-trained-text").text(player1.timesTrained);
+}
+
