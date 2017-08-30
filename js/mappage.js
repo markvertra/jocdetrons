@@ -6,6 +6,7 @@ $(document).ready(function(){
         $(".map-quit-btn").on("click", function(){
             $(".map-section").css("display", "none");
             $(".first-section").css("display", "block");
+            document.querySelector(".fear-and-blood").play();
         });
 
         $(".map-instructions-hide-btn").on("click", function(){
@@ -13,6 +14,7 @@ $(document).ready(function(){
             $(".map-event").css("display", "block");
             $(".map-event-wall").css("display", "none");
             $(".display-stats-btn").css("display", "block");
+            $(".map-train-btn").css("display", "block");
         });
 
         $(".display-stats-btn").on("click", function() {
@@ -24,6 +26,7 @@ $(document).ready(function(){
             $(".map-section").css("display", "none");
             $(".training-section").css("display", "block");
             $(".training-instructions-container").css("display", "block");
+            $(".map-train-btn").css("display", "none");
             trainingGame = new TrainingGame();
         });
 

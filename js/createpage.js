@@ -65,6 +65,7 @@ $(document).ready(function(){
     $(".create-quit-btn").on("click", function(){
         $(".create-section").css("display", "none");
         $(".first-section").css("display", "block");
+        document.querySelector(".fear-and-blood").play();
     });
 
     $(".create-btn").on("click", function(){
@@ -80,6 +81,7 @@ $(document).ready(function(){
             $(".map-section").css("display", "block");
             $(".map-display").css("display", "block");
             $(".affiliation-input").val();
+            document.querySelector(".dragon-roar").play();
             player1 = new Character($(".name-input").val(),
                                     $(".house-input").val(),
                                     $(".affiliation-input").val(),

@@ -89,11 +89,17 @@
 }
 
 .display-stats-btn {
-    position: absolute;
-    top: 8%;
-    left: 70%;
-    width: 200px;
+    float: right;
     display: none;
+    margin: 20px;
+    width: 150px;
+}
+
+.map-train-btn {
+    float: right;
+    display: none;
+    width: 150px;
+    margin: 20px;
 }
 
 .stats-screen {
@@ -128,8 +134,4 @@
     left: 32%;
 }
 
-.map-train-btn {
-    position: absolute;
-    bottom: 10%;
-    left: 50%
-}
+

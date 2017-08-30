@@ -14,7 +14,7 @@ button:focus {
     height: 800px;
     border: 50px black solid;
     text-align: center;
-    display: none; 
+    display: block; 
 }
 
 .title-box {
@@ -48,7 +48,7 @@ button:focus {
 
 .footer {
     color: white;
-    margin-top: 10%;
+    margin-top: 15%;
     font-family: 'Raleway', sans-serif;
 }
 

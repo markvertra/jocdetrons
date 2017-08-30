@@ -45,6 +45,7 @@ function healthCheck(attacker){
     if (player1.currentHealth <= 0) {
         $(".battle-section").css("display", "none");
         $(".game-over").css("display", "block");
+        document.querySelector(".my-watch-has-ended").play();
         setTimeout(function() {
             $(".battle-quit-btn").trigger("click");
         }, 5000);

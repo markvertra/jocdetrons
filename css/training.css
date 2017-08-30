@@ -5,7 +5,7 @@
     height: 800px;
     border: 50px black solid;
     text-align: center;
-    display: block;
+    display: none;
 }
 
 .training-instructions-container {
@@ -44,6 +44,26 @@
     height: 600px;
     width: 100%;
     cursor: url("../img/slaphand.jpg"), crosshair;
+}
+
+.stats-boost-screen {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    left: 20%;
+    top: 10%;
+    background-image: url("../img/paperscrollBackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    display: none;
+}
+
+.stats-boost-screen .acknowledged {
+    width: 200px;
 }
 
 .joffrey-face {

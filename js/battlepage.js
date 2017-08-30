@@ -43,6 +43,7 @@ $(document).ready(function(){
         $(".first-section").css("display", "block");
         $(".game-over").css("display", "none");
         battleOpen = false;
+        document.querySelector(".fear-and-blood").play();
         healthResetter();
     });
 
@@ -51,6 +52,7 @@ $(document).ready(function(){
         battlesWon += 1;
         healthResetter();
         $(".battle-won").css("display", "none");
+        $(".map-train-btn").css("display", "block");
         if (battlesWon < 4) {
             $(".battle-section").css("display", "none");
             $(".map-section").css("display", "block");

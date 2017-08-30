@@ -16,7 +16,16 @@
     <title>Fantasy Game of Thrones</title>
 </head>
 <body>
-    <audio src="audio/reins.mp3" class="reins"></audio>
+
+    <audio loop class="reins" src="audio/reins.mp3"></audio>
+    <audio class="fear-and-blood" src="audio/fearandblood.mp3"></audio>
+    <audio class="slap" src="audio/slapsound.mp3"></audio>
+    <audio class="i-am-the-king" src="audio/iamtheking.mp3"></audio>
+    <audio class="oh-my" src="audio/ohmy.mp3" volume=0.5></audio>
+    <audio class="win-or-die" src="audio/winoryoudie.mp3"></audio>
+    <audio class="my-watch-has-ended" src="audio/mywatchhasended.mp3"></audio>
+    <audio class="no-one" src="audio/noone.mp3"></audio>
+    
     <main class="first-section">
         <div class="title-box">
             <h1 class="game-title">Game of Thrones</h1>
@@ -38,7 +47,6 @@
             
         <div class="game-buttons">
             <h4 class="btn play-button">1 PLAYER</h4>
-            <h4 class="btn multi-play-button">2 PLAYER</h4>
             <h4 class="btn instructions-button">INSTRUCTIONS</h4>
             <p class="footer">Made with love and care and swords by Mark Allen</p>
         </div>
@@ -157,13 +165,13 @@
                 <div class="return-to-map-btn acknowledged">
                     Return to Map
                 </div>
-                <div class="map-train-btn acknowledged">
-                    Train with the Master of Arms
-                </div>
             </div>
         </div>
         <div class="acknowledged display-stats-btn">
             View Stats
+        </div>
+        <div class="acknowledged map-train-btn">
+                Train
         </div>
     </main>
 
@@ -259,12 +267,18 @@
         </div>
         <div class="training-field">
             <div class="training-area">
+                <div class="stats-boost-screen">
+                    <div class="acknowledged boost-button boost-strength">Boost Strength</div>
+                    <div class="acknowledged boost-button boost-cunning">Boost Cunning</div>
+                    <div class="acknowledged boost-button boost-stamina">Boost Stamina</div>
+                    <div class="acknowledged boost-button boost-charisma">Boost Charisma</div>
+                    <div class="boost-empty"><audio src="audio/dragonroar.mp3" class="dragon-roar"></div>
+                </div>
                 <div class="joffrey-face">
-                    <audio class="slap" src="audio/slapsound.mp3"></audio>
-                    <audio class="i-am-the-king" src="audio/iamtheking.mp3"></audio>
+                    
                 </div>
                 <div class="goodie-face">
-                    <audio class="oh-my" src="audio/ohmy.mp3" volume=0.5></audio>
+                   
                 </div>
             </div>
             <div class="training-hud">
@@ -293,7 +307,7 @@
     <script src="js/abilities.js"></script>
     <script src="js/characters.js"></script>
     <script src="js/battlelogic.js"></script>
-    <script src="js/training.js"></script>
+    <script src="js/trainingpage.js"></script>
     <script src="js/traininglogic.js"></script>
 </body>
 </html>
