@@ -35,16 +35,26 @@
 	to { background-color: orange; }
 }
 
+@keyframes color_change_special {
+    from { background-color: green;}
+    to {background-color: blue;}
+}
+
+@keyframes color_change_training {
+    from { background-color: pink;}
+    to {background-color: purple;}
+}
+
 .map-event-winterfell {
     position: absolute;
     top: 27%;
     left: 23%;
 }
 
-.map-event-kings-landing {
+.map-event-riverlands {
     position: absolute;
-    top: 64%;
-    left: 27%;
+    top: 56%;
+    left: 23%;
 }
 
 .map-event-dragonstone {
@@ -64,6 +74,20 @@
     top: 6.5%;
     left: 16.5%;
     display: none;
+}
+
+.map-event-training {
+    position: absolute;
+    top: 64%;
+    left: 27%;
+    animation: color_change_training 1s infinite alternate;
+}
+
+.map-event-special {
+    position: absolute;
+    top: 80%;
+    left: 15%;
+    animation: color_change_special 1s infinite alternate;
 }
 
 .map-hints {

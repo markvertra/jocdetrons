@@ -75,6 +75,7 @@ function upgradeTimer () {
     var timeLeft = setInterval( function() {
     if (upgradeGame.time == 0) {
         $(".upgrade-time-left-text").text("Time up");
+        $(".upgrade-question-area-wrapper").css("display", "none");
         clearInterval(timeLeft);
     } else if (upgradeGame._winChecker()) {
         $(".upgrade-time-left-text").text("You win!");
@@ -84,6 +85,7 @@ function upgradeTimer () {
         upgradeManaged();
     } else if (upgradeGame._lossChecker()) {  
         $(".upgrade-time-left-text").text("You lose!");
+        $(".upgrade-question-area-wrapper").css("display", "none");
         clearInterval(timeLeft);
     } else {
         upgradeGame.time--;

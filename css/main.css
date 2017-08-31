@@ -17,6 +17,38 @@ button:focus {
     display: block; 
 }
 
+@media (max-width: 1420px) {
+    .first-section, .create-section, .map-section,
+    .battle-section, .training-section, .upgrade-section {
+        display: none;
+    }
+
+    .non-responsive-warning {
+        background-image: url("../img/aemonBackground.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 800px;
+        border: 50px black solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .non-responsive-warning .acknowledged {
+        font-size: 3em;
+        width: 400px;
+        height: 300px;
+        font-family: "raleway", sans-serif;
+        padding: 20px;
+    }
+}
+
+@media (min-width: 1420px) {
+    .non-responsive-warning {
+        display:none;
+    }
+}
+
 .title-box {
     margin-top: 10%;
     color: yellowgreen;

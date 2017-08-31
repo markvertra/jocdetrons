@@ -18,24 +18,9 @@ $(document).ready(function(){
             $(".upgrade-special-btn").css("display", "block");
         });
 
-        $(".upgrade-special-btn").on("click", function() {
-            $(".map-section").css("display", "none");
-            $(".upgrade-section").css("display", "block");
-        });
-
         $(".display-stats-btn").on("click", function() {
             $(".stats-screen").css("display", "block");
             $(".display-stats-btn").css("display", "none");
-        });
-
-        $(".map-train-btn").on("click", function() {
-            $(".map-section").css("display", "none");
-            $(".training-section").css("display", "block");
-            $(".training-instructions-container").css("display", "block");
-            $(".map-train-btn").css("display", "none");
-            player1.timesTrained++;
-            statsFiller();
-            trainingGame = new TrainingGame();
         });
 
         $(".return-to-map-btn").on("click", function() {
@@ -44,32 +29,80 @@ $(document).ready(function(){
         });
 
         $(".map-event").on("click", function(){
-            document.querySelector(".i-choose-violence").play();
-            $(".map-section").css("display", "none");
-            $(".battle-section").css("display", "block");
-            $(".player-one").css("display", "block");
-            $(".player-two").css("display", "block");
-            $(this).css("display", "none");
-            setTimeout( function () {
-                AI();
-            }, 1000);
             if ($(this).hasClass("map-event-winterfell")) {
+                document.querySelector(".i-choose-violence").play();
+                $(".map-section").css("display", "none");
+                $(".battle-section").css("display", "block");
+                $(".player-one").css("display", "block");
+                $(".player-two").css("display", "block");
+                $(this).css("display", "none");
+                setTimeout( function () {
+                    AI();
+                }, 1000);
                 player2 = ramseyBolton;
                 battleRestarter();
                 $(".location-title").text("Winterfell");
-            } else if ($(this).hasClass("map-event-kings-landing")) {
+            } else if ($(this).hasClass("map-event-riverlands")) {
+                document.querySelector(".i-choose-violence").play();
+                $(".map-section").css("display", "none");
+                $(".battle-section").css("display", "block");
+                $(".player-one").css("display", "block");
+                $(".player-two").css("display", "block");
+                $(this).css("display", "none");
+                setTimeout( function () {
+                    AI();
+                }, 1000);
                 player2 = gregorClegane;
                 battleRestarter();
-                $(".location-title").text("King's Landing");
+                $(".location-title").text("Riverlands");
             } else if ($(this).hasClass("map-event-casterley")) {
+                document.querySelector(".i-choose-violence").play();
+                $(".map-section").css("display", "none");
+                $(".battle-section").css("display", "block");
+                $(".player-one").css("display", "block");
+                $(".player-two").css("display", "block");
+                $(this).css("display", "none");
+                setTimeout( function () {
+                    AI();
+                }, 1000);
                 player2 = tywinLannister;
                 battleRestarter();
                 $(".location-title").text("Casterley Rock");
             } else if ($(this).hasClass("map-event-dragonstone")) {
+                document.querySelector(".i-choose-violence").play();
+                $(".map-section").css("display", "none");
+                $(".battle-section").css("display", "block");
+                $(".player-one").css("display", "block");
+                $(".player-two").css("display", "block");
+                $(this).css("display", "none");
+                setTimeout( function () {
+                    AI();
+                }, 1000);
                 player2 = stannisBaratheon;
                 battleRestarter();
                 $(".location-title").text("Dragonstone");
+            } else if ($(this).hasClass("map-event-training")) {
+                $(".map-section").css("display", "none");
+                $(".training-section").css("display", "block");
+                $(".training-instructions-container").css("display", "block");
+                $(this).css("display", "none");
+                player1.timesTrained++;
+                statsFiller();
+                trainingGame = new TrainingGame();
+            } else if ($(this).hasClass("map-event-special")) {
+                $(".map-section").css("display", "none");
+                $(".upgrade-section").css("display", "block");
+                $(this).css("display", "none");
             } else if ($(this).hasClass("map-event-wall")) {
+                document.querySelector(".i-choose-violence").play();
+                $(".map-section").css("display", "none");
+                $(".battle-section").css("display", "block");
+                $(".player-one").css("display", "block");
+                $(".player-two").css("display", "block");
+                $(this).css("display", "none");
+                setTimeout( function () {
+                    AI();
+                }, 1000);
                 player2 = nightKing;
                 battleRestarter();
                 $(".location-title").text("Far Beyond The Wall");
@@ -88,8 +121,8 @@ $(document).ready(function(){
             mapCloser();
         });
 
-        $(".map-event-kings-landing").hover(function() {
-            mapOpener("King's Landing");
+        $(".map-event-riverlands").hover(function() {
+            mapOpener("Riverlands");
         }, function() {
             mapCloser();
         });
@@ -105,6 +138,20 @@ $(document).ready(function(){
         }, function() {
             mapCloser();
         });
+
+        $(".map-event-training").hover(function() {
+            mapOpener("King's Landing");
+        }, function() {
+            mapCloser();
+        });
+
+        $(".map-event-special").hover(function() {
+            mapOpener("Old Town");
+        }, function() {
+            mapCloser();
+        });
+
+
     });
  
 function battleRestarter(){

@@ -53,7 +53,8 @@ $(document).ready(function(){
         player1.enemiesDefeated++;
         healthResetter();
         $(".battle-won").css("display", "none");
-        $(".map-train-btn").css("display", "block");
+        $(".map-event-training").css("display", "block");
+
         statsFiller();
         if (player1.battlesWon < 4) {
             $(".battle-section").css("display", "none");

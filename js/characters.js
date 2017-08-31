@@ -27,9 +27,11 @@ var playerOneAbilityFour = true;
 
 var EVENT_TEXTS = {"Winterfell": "Qyburn has resurrected the wicked Ramsey Bolton outside the gates of Winterfell. Bolton has made a cloak out of the Maester's skin and kidnapped the Master-at-Arms. Slay this vile beast.",
                   "Casterley Rock": "Qyburn has resurrected the dastardly Tywin Lannister inside Casterley Rock. Lannister has summoned an army of zombie soliders and plans to conquer the 7 Kingdoms. Kill him before it is too late.",
-                  "King's Landing": "Qyburn has resurrected the Mountain-That-Rides (again). Gregor Clegane is slaying the peasants in the streets, burning houses down and wreaking chaos. Can you defeat this monster?",
+                  "Riverlands": "Qyburn has resurrected the Mountain-That-Rides (again). Gregor Clegane is slaying the peasants in the streets, burning houses down and wreaking chaos. Can you defeat this monster?",
                   "Dragonstone": "Qyburn has resurrected Stannis Baratheon. Baratheon is convinced he is the true ruler of Westeros and working alongside Melisandre, has cursed all his rivals. Stop him, now!",
-                  "Beyond The Wall": "Qyburn has resurrected the Night King, the greatest ever threat to Westeros. Before he leads his army of undead south, you must stop him in his tracks and secure peace, forever."};
+                  "Beyond The Wall": "Qyburn has resurrected the Night King, the greatest ever threat to Westeros. Before he leads his army of undead south, you must stop him in his tracks and secure peace, forever.",
+                  "King's Landing": "To defeat your enemies you need to get stronger. Fortunately, Qyburn has resurrected a pathetic monster, the despised King Joffrey, to help you train and improve.",
+                  "Old Town": "To defeat the very strongest monsters and the Night King, you will need to improve the strength of your special ability. The Maesters in Old Town may know some secrets to help you improve."};
 
 
 
