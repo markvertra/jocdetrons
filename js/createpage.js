@@ -39,6 +39,14 @@ $(document).ready(function(){
         $(".attribute-info").text("");
     });
 
+    $(".affiliation-input").hover(function() {
+        $(".attribute-info").css("display", "block");
+        $(".attribute-info").text("Each affiliation grants a unique special ability.");
+    }, function() {
+        $(".attribute-info").css("display", "none");
+        $(".attribute-info").text("");
+    });
+
     $(".up-btn").on("click", function(){
         var points = parseInt($(".allocated-points").text());
         if (points < 25) {
