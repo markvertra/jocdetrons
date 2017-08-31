@@ -3,6 +3,7 @@ var answer;
 $(document).ready(function(){  
 
     $(".upgrade-map-return-btn").on("click", function() {
+        $(".upgrade-question-area-wrapper").css("display", "block");
         $(".upgrade-section").css("display", "none");
         $(".map-section").css("display", "block");
     });
@@ -16,18 +17,21 @@ $(document).ready(function(){
     });
 
     $(".upgrade-answer").on("click", function() {
-        if (answer == $(this).text()) {
+        if (answer.correctAnswer1 == $(this).text()) {
             upgradeGame.answersCorrect++;
             $(".upgrade-correct-text").text(upgradeGame.answersCorrect);
+            squareResetter(PICTURE_SCREENS);
         } else {
             upgradeGame.answersWrong++;
             $(".upgrade-wrong-text").text(upgradeGame.answersWrong);
+            squareResetter(PICTURE_SCREENS);
+            document.querySelector(".you-idiot").play();
         }
         if (upgradeGame._winChecker() || upgradeGame._lossChecker()) {
-            console.log("win");
+            squareResetter(PICTURE_SCREENS);
         } else {
             answer = newQuestion();
-            upgradeGame.time += 10;
+            upgradeGame.time += 12;
         }
         
     });
@@ -38,14 +42,33 @@ function upgradeManaged () {
 }
 
 function newQuestion() {
-    question = selectQuestion(upgradeQuestions);
+    question = selectRandomElement(upgradeGame.upgradeQuestions);
     $(".upgrade-question-bar").text(question.question1);
     $(".upgrade-answer-one").text(question.answer1A);
     $(".upgrade-answer-two").text(question.answer1B);
     $(".upgrade-answer-three").text(question.answer1C);
     $(".upgrade-answer-four").text(question.answer1D);
     $(".upgrade-picture-frame").css("background-image", "url(" + question.image + ")");
-    return question.correctAnswer1;
+    return question;
+}
+
+// makes a square go clear
+
+function turnToClear (element) {
+    $(element).css("background-color", "rgba(0,0,0,0)");
+}
+
+// makes a random square go clear 
+
+function randomClear (array) {
+    turnToClear(selectRandomElement(array));
+}
+// resets all squares
+
+function squareResetter (array) {
+    array.forEach(function(element) {
+        $(element).css("background-color", "black");
+    });
 }
 
 function upgradeTimer () {
@@ -55,6 +78,8 @@ function upgradeTimer () {
         clearInterval(timeLeft);
     } else if (upgradeGame._winChecker()) {
         $(".upgrade-time-left-text").text("You win!");
+        $(".upgrade-question-area-wrapper").css("display", "none");
+        document.querySelector(".drink-and-know").play();
         clearInterval(timeLeft);
         upgradeManaged();
     } else if (upgradeGame._lossChecker()) {  
@@ -62,6 +87,7 @@ function upgradeTimer () {
         clearInterval(timeLeft);
     } else {
         upgradeGame.time--;
+        randomClear(answer.screens);
         $(".upgrade-time-left-text").text(upgradeGame.time);
         }}, 1000);
 }

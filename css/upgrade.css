@@ -6,7 +6,7 @@
     border: 50px black solid;
     text-align: center;
     font-family: "raleway", sans-serif;
-    /* display: none; */
+    display: none;
     color: yellowgreen;
 }
 
@@ -47,11 +47,20 @@
     border: 2px solid black;
     top: 20%;
     left: 39%;
-    height: 300px;
-    width: 300px;
+    height: 304px;
+    width: 304px;
+    padding: 0px;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("../img/upgrade/osha.jpg")
+    background-image: url("../img/upgrade/osha.jpg");
+}
+
+.upgrade-picture-frame-cover {
+    height: 75px;
+    width: 75px;
+    background-color: black;
+    float: left;
+    margin: 0px;
 }
 
 .upgrade-question-area {
