@@ -1,0 +1,99 @@
+.upgrade-section {
+    background-image: url("../img/desertBackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    border: 50px black solid;
+    text-align: center;
+    font-family: "raleway", sans-serif;
+    /* display: none; */
+    color: yellowgreen;
+}
+
+.upgrade-instructions {
+    background-color: rgba(0,0,0,0.7);
+    padding: 50px 220px 100px;
+    text-align: center;
+    height: 100%;
+    font-family: "raleway", sans-serif;
+    color: yellowgreen;
+}
+
+.upgrade-instructions p {
+    line-height: 2em;
+    font-size: 2em;
+    margin-top: 30px 0px;
+}
+
+.upgrade-instructions h4 {
+    font-size: 3em;
+    margin-bottom: 50px;
+}
+
+.upgrade-question-bar {
+    position: absolute;
+    top: 10%;
+    left: 24%;
+    background: rgba(0,0,0,0.7);
+    width: 50%;
+    font-family: "raleway", sans-serif;
+    padding: 10px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.upgrade-picture-frame {
+    position: absolute;
+    border: 2px solid black;
+    top: 20%;
+    left: 39%;
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../img/upgrade/osha.jpg")
+}
+
+.upgrade-question-area {
+    display: none;
+}
+
+.upgrade-answer-bar {
+    position: absolute;
+    width: 90%;
+    top: 65%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.upgrade-answer {
+    background-color:  rgba(0,0,0,0.7);
+    width: 250px;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 10px;
+}
+
+.upgrade-answer:hover {
+    color: white;
+}
+
+.upgrade-hud {
+    position: absolute;
+    bottom: 5%;
+    background-color: rgba(0,0,0,0.7);
+    color: yellowgreen;
+    height: 150px;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.upgrade-hud span {
+    font-size: 2em;
+}
+
+.upgrade-map-return-btn {
+    width: 200px;
+}
