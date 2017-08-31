@@ -46,14 +46,12 @@ $(document).ready(function(){
             if ($(this).hasClass("map-event-winterfell")) {
                 document.querySelector(".i-choose-violence").play();
                 $(".map-section").css("display", "none");
-                $(".battle-section").css("display", "block");
                 $(".battle-section").css("background-image", "url('img/winterfellBackground.jpg')");
                 $(".player-one").css("display", "block");
                 $(".player-two").css("display", "block");
+                $(".battle-section").css("display", "block");
+                $(".battlefield").css("display", "none");
                 $(this).css("display", "none");
-                setTimeout( function () {
-                    AI();
-                }, 1000);
                 player2 = ramseyBolton;
                 battleRestarter();
                 $(".location-title").text("Winterfell");
@@ -64,10 +62,8 @@ $(document).ready(function(){
                 $(".player-one").css("display", "block");
                 $(".player-two").css("display", "block");
                 $(".battle-section").css("background-image", "url('img/riverrunBackground.png')");
+                $(".battlefield").css("display", "none");
                 $(this).css("display", "none");
-                setTimeout( function () {
-                    AI();
-                }, 1000);
                 player2 = gregorClegane;
                 battleRestarter();
                 $(".location-title").text("Riverlands");
@@ -78,10 +74,8 @@ $(document).ready(function(){
                 $(".player-one").css("display", "block");
                 $(".player-two").css("display", "block");
                 $(".battle-section").css("background-image", "url('img/casterleyrockBackground.jpg')");
+                $(".battlefield").css("display", "none");
                 $(this).css("display", "none");
-                setTimeout( function () {
-                    AI();
-                }, 1000);
                 player2 = tywinLannister;
                 battleRestarter();
                 $(".location-title").text("Casterley Rock");
@@ -92,10 +86,9 @@ $(document).ready(function(){
                 $(".player-one").css("display", "block");
                 $(".player-two").css("display", "block");
                 $(".battle-section").css("background-image", "url('img/dragonstoneBackground.jpg')");
+                $(".battlefield").css("display", "none");
                 $(this).css("display", "none");
-                setTimeout( function () {
-                    AI();
-                }, 1000);
+                
                 player2 = stannisBaratheon;
                 battleRestarter();
                 $(".location-title").text("Dragonstone");
@@ -118,10 +111,8 @@ $(document).ready(function(){
                 $(".player-one").css("display", "block");
                 $(".player-two").css("display", "block");
                 $(".battle-section").css("background-image", "url('img/beyondthewallBackground.jpg')");
+                $(".battlefield").css("display", "none");
                 $(this).css("display", "none");
-                setTimeout( function () {
-                    AI();
-                }, 1000);
                 player2 = nightKing;
                 battleRestarter();
                 $(".location-title").text("Far Beyond The Wall");

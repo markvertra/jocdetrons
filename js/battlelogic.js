@@ -37,7 +37,7 @@ function prayer(attacker){
 
 function specialAttack(attacker, defender){
     attacker.specialsUsed++;
-    attackPower = (attacker.special - defender.defence) * attacker.specialAttack["power"]; 
+    attackPower = Math.floor((attacker.special - defender.defence) * attacker.specialAttack["power"]); 
     document.querySelector(attacker.specialAttack["soundEffect"]).play();
     if (attackPower > 0) {
         defender.currentHealth -= attackPower;

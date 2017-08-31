@@ -6,6 +6,7 @@
     border: 50px black solid;
     text-align: center;
     display: none;
+    font-family: "raleway", sans-serif;
 }
 
 .battle-title-box {
@@ -17,12 +18,23 @@
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
-    width: 200px;
-    height: 150px;
+    width: 800px;
+    height: 600px;
     padding: 20px;
-    font-size: 1.6em;
+    font-size: 1.4em;
     left: 10%;
+    top: 10%;
+    font-family: "raleway", sans-serif;
+    text-align: center;
+}
 
+.battle-instructions h3 {
+    font-size: 2em;
+}
+
+.battle-instructions p {
+    font-size: 1em;
+    line-height: 1.1em;
 }
 
 .battlefield {
@@ -108,12 +120,13 @@
 .ability-btn {
     position: relative;
     height: 40px;
-    width: 150px;
+    width: 220px;
     background-color:  rgba(199, 154, 56, 0.65);
     margin: 10px 0px;
     padding:0px;
     text-align: center;
     line-height: 30px;
+    font-family: "raleway", sans-serif;
 }
 
 .key-text {

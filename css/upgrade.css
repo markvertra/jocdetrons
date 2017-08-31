@@ -106,3 +106,19 @@
 .upgrade-map-return-btn {
     width: 200px;
 }
+
+.upgrade-well-done-info {
+    display: none;
+}
+
+.upgrade-well-done {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.7);
+    font-family: "raleway", sans-serif;
+    color: yellowgreen;
+}
