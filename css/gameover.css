@@ -7,7 +7,7 @@
     display: none;
 }
 
-.game-over-box, .battle-won-box {
+.game-over-box, .you-won-box {
     background-color: rgba(0, 0, 0, 0.7);
     margin: auto;
     width: 90%;

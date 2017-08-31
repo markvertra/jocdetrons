@@ -63,7 +63,7 @@ function healthCheck(attacker){
         return false;
     } else if (player2.currentHealth <= 0) {
         $(".battle-section").css("display", "none");
-        $(".battle-won").css("display", "none");
+        $(".battle-won").css("display", "block");
         setTimeout( function(){
             $(".battle-win-btn").trigger("click");
         }, 5000);
