@@ -15,6 +15,12 @@ $(document).ready(function(){
             $(".map-event-wall").css("display", "none");
             $(".display-stats-btn").css("display", "block");
             $(".map-train-btn").css("display", "block");
+            $(".upgrade-special-btn").css("display", "block");
+        });
+
+        $(".upgrade-special-btn").on("click", function() {
+            $(".map-section").css("display", "none");
+            $(".upgrade-section").css("display", "block");
         });
 
         $(".display-stats-btn").on("click", function() {

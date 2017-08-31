@@ -14,7 +14,7 @@ button:focus {
     height: 800px;
     border: 50px black solid;
     text-align: center;
-    display: block; 
+    display: none; 
 }
 
 .title-box {
@@ -76,11 +76,21 @@ button:focus {
 .instructions-text {
     font-size: 1.3em;
     font-family: 'Raleway', sans-serif;
+}
 
+.options {
+    top: 20%;
+    height: 400px;
 }
 
 .options-text {
     line-height: 2em;
+}
+
+.difficulty-input {
+    margin-left: 130px;
+    line-height: 2em;
+    font-size: 0.7em;
 }
 
 .acknowledged {

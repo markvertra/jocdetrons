@@ -1,6 +1,6 @@
 
 function attack(attacker, defender){
-    attackPower = attacker.attack - defender.defence;
+    attackPower = Math.floor((attacker.attack - defender.defence) * (Math.random() + 0.5));
     document.querySelector(".sword-attack").play();
     if (attackPower > 0) {
         defender.currentHealth -= attackPower;
@@ -13,25 +13,31 @@ function attack(attacker, defender){
 
 function defenceBoost(attacker){
     document.querySelector(".shields").play();
-    attacker.defence *= 1.5;
+    var defenceMultiplier = (1.5 + Math.random() - 0.5);
+    attacker.defence *= defenceMultiplier;
+    healthCheck();
     setTimeout(function(){
-        attacker.defence *= (2 / 3);
-    }, attacker.cooldownTime);
-    $(".battle-text").append("<li>" + attacker.name + " " + attacker.surname + " has increased defence by 50% for " + parseFloat(attacker.cooldownTime / 1000) + " seconds.</li>");
+        attacker.defence *= (1 / defenceMultiplier);
+        attacker.defence = Math.round(attacker.defence);
+    }, 5000);
+    $(".battle-text").append("<li>" + attacker.name + " " + attacker.surname + " has increased defence by 50% for 5 seconds.</li>");
 }
 
 function prayer(attacker){
     document.querySelector(".night-is-dark").play();
-    attacker.attack *= 1.5;
+    var attackMultiplier = (1.5 + Math.random() - 0.5);
+    attacker.attack *= attackMultiplier;
+    healthCheck();
     setTimeout(function(){
-        attacker.attack *= (2 / 3);
-    }, attacker.cooldownTime);
-    $(".battle-text").append("<li>" + attacker.name + " " + attacker.surname + " has increased attack by 50% for " + parseFloat(attacker.cooldownTime / 1000) + " seconds.</li>");
+        attacker.attack *= (1 / attackMultiplier);
+        attacker.attack = Math.round(attacker.attack);
+    }, 5000);
+    $(".battle-text").append("<li>" + attacker.name + " " + attacker.surname + " has increased attack by 50% for 5 seconds.</li>");
 }
 
 function specialAttack(attacker, defender){
     attacker.specialsUsed++;
-    attackPower = attacker.special - defender.defence; 
+    attackPower = (attacker.special - defender.defence) * attacker.specialAttack["power"]; 
     document.querySelector(attacker.specialAttack["soundEffect"]).play();
     if (attackPower > 0) {
         defender.currentHealth -= attackPower;
@@ -67,7 +73,7 @@ function healthCheck(attacker){
 }
 
 function randomMoveSelector() {
-   return Math.floor(Math.random() * 4);
+   return Math.floor(Math.random() * 3.5);
 }
 
 function AI() {

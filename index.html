@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/battle.css">
     <link rel="stylesheet" href="css/gameover.css">
     <link rel="stylesheet" href="css/training.css">
+    <link rel="stylesheet" href="css/upgrade.css">
     <link href="https://fonts.googleapis.com/css?family=Montez" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <title>Fantasy Game of Thrones</title>
@@ -64,7 +65,11 @@
             <h5 class="options-title">Options</h5>
             <ul class="options-text">
                 <li>Music Volume<button class="music-up-btn up-btn">+</button><button class="music-down-btn down-btn">-</button></li>
-                <li>Difficulty: Easy Medium Hard</li>
+                <li>Difficulty <select class="difficulty-input" id="difficulty">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="Targaryen">Hard</option>
+                    </select></li>
                 <li></li>
                 <li><div class="acknowledged options-quit-btn">Return to Main Menu</div></li>
             </ul>
@@ -193,12 +198,9 @@
                 </div>
             </div>
         </div>
-        <div class="acknowledged display-stats-btn">
-            View Stats
-        </div>
-        <div class="acknowledged map-train-btn">
-                Train
-        </div>
+        <div class="acknowledged display-stats-btn">View Stats</div>
+        <div class="acknowledged map-train-btn">Train</div>
+        <div class="acknowledged upgrade-special-btn">Upgrade Special</div>
     </main>
 
     <main class="battle-section">
@@ -294,8 +296,6 @@
         </div>
     </main>
 
-
-
     <main class="training-section">
         <div class="training-instructions-container">
             <h4>Train by Slapping Joffrey</h4>
@@ -335,6 +335,50 @@
         </div>
     </main>
 
+    <main class="upgrade-section">
+        <div class="upgrade-instructions">
+            <div class="upgrade-instructions-text">
+                <h4>Smarter, better, faster, stronger</h4>
+                <p>
+                The Maesters of Old Town have offered you the chance to study with them, improve your wisdom
+                and learn an even more powerful special ability. <br><br>
+
+                However, to improve will test the limits of your knowledge of Game of Thrones. Answer the following questions correctly 
+                within the time limit to enhance your special ability.
+                </p>
+            </div>
+            <div class="acknowledged upgrade-instructions-quit-btn">Continue</div>
+        </div>
+        <div class="upgrade-question-area">
+            <div class="upgrade-question-bar"></div>
+            <div class="upgrade-picture-frame"></div>
+            <div class="upgrade-answer-bar">
+                <div class="upgrade-answer-one upgrade-answer">
+                </div>
+                <div class="upgrade-answer-two upgrade-answer">
+                </div>
+                <div class="upgrade-answer-three upgrade-answer">
+                </div>
+                <div class="upgrade-answer-four upgrade-answer">
+                </div>
+            </div>
+            <div class="upgrade-hud">
+                <div class="hud-bar upgrade-questions-correct">
+                    <h3>Questions Correct:<br><span class="upgrade-correct-text">0</span></h3>
+                </div>
+                <div class="hud-bar upgrade-questions-wrong">
+                    <h3>Questions Incorrect:<br><span class="upgrade-wrong-text">0</span></h3>
+                </div>
+                <div class="hud-bar upgrade-time-left">
+                    <h3>Time left:<br><span class="upgrade-time-left-text">10</span></h3> 
+                </div>
+                <div class="hud-bar upgrade-quit">
+                    <div class="acknowledged upgrade-map-return-btn">Quit Training</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/mainpage.js"></script>
@@ -346,5 +390,7 @@
     <script src="js/battlelogic.js"></script>
     <script src="js/trainingpage.js"></script>
     <script src="js/traininglogic.js"></script>
+    <script src="js/upgrade.js"></script>
+    <script src="js/upgradelogic.js"></script>
 </body>
 </html>

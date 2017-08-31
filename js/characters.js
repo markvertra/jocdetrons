@@ -51,7 +51,7 @@ function Character(name, surname, affiliation, image, strength, cunning, stamina
     this.attack = DEFAULT_ATTACK + strength;
     this.special = DEFAULT_SPECIAL + cunning;
     this.defence = DEFAULT_DEFENCE + stamina;
-    this.cooldownTime = DEFAULT_COOLDOWN - 150 * this.charisma;
+    this.cooldownTime = DEFAULT_COOLDOWN - 200 * this.charisma;
 
     this.abilityOne = abilityOne;
     this.abilityTwo = abilityTwo;
@@ -63,6 +63,8 @@ function Character(name, surname, affiliation, image, strength, cunning, stamina
     this.enemiesDefeated = 0;
     this.battlesWon = 0;
     this.timesTrained = 0;
+
+    this.abilityUpgraded = false;
 }
 
 var ramseyBolton = new Character("Ramsey",

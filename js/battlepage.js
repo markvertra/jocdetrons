@@ -8,28 +8,28 @@ $(document).ready(function(){
                 case 83:
                     if (playerOneAbilityOne) {
                         timerReset();
-                        cooldownBarOne();
+                        cooldownBarOne(player1.cooldownTime - 2000);
                         attack(player1, player2);
                     }
                     break; 
                 case 65:
                     if (playerOneAbilityTwo) {
                         timerReset();
-                        cooldownBarTwo();
+                        cooldownBarTwo(player1.cooldownTime - 1000);
                         defenceBoost(player1);
                     }
                     break;
                 case 68:
                     if (playerOneAbilityThree) {
                         timerReset();
-                        cooldownBarThree();
+                        cooldownBarThree(player1.cooldownTime);
                         prayer(player1);
                     }   
                     break;
                 case 87:
                     if (playerOneAbilityFour) {
                         timerReset();
-                        cooldownBarFour();
+                        cooldownBarFour(player1.cooldownTime * 2);
                         specialAttack(player1, player2);
                     }
                     break;
@@ -135,8 +135,8 @@ function cooldownBarFour(cooldownTime = DEFAULT_COOLDOWN) {
     $(".cooldown-bar-four-pone").animate({width: 150}, cooldownTime);
     
     var barLoad = setTimeout(function() {
-    $(".cooldown-bar-four-pone").css("background-color", "blue");
-    playerOneAbilityFour = true;
+        $(".cooldown-bar-four-pone").css("background-color", "blue");
+        playerOneAbilityFour = true;
     }, cooldownTime);
 }
 

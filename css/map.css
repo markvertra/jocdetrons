@@ -88,18 +88,12 @@
     font-size: 1.8em;
 }
 
-.display-stats-btn {
+.display-stats-btn, .map-train-btn, .upgrade-special-btn {
     float: right;
     display: none;
     margin: 20px;
-    width: 150px;
-}
-
-.map-train-btn {
-    float: right;
-    display: none;
-    width: 150px;
-    margin: 20px;
+    width: 180px;
+    background-color: rgba(199, 154, 56, 0.8)
 }
 
 .stats-screen {
