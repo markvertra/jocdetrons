@@ -22,19 +22,20 @@
     height: 600px;
     padding: 20px;
     font-size: 1.4em;
-    left: 10%;
+    left: 25%;
     top: 10%;
     font-family: "raleway", sans-serif;
     text-align: center;
 }
 
 .battle-instructions h3 {
+    margin-bottom: 10px;
     font-size: 2em;
 }
 
 .battle-instructions p {
-    font-size: 1em;
-    line-height: 1.1em;
+    font-size: 0.9em;
+    line-height: 1em;
 }
 
 .battlefield {
@@ -53,6 +54,10 @@
     text-align: left;
     width: 33%;
     height: 90%;
+}
+
+.img-instructions {
+    float: left;
 }
 
 .battle-info-box {

@@ -67,6 +67,7 @@ function Character(name, surname, affiliation, image, strength, cunning, stamina
     this.timesTrained = 0;
 
     this.abilityUpgraded = false;
+    this.battleInstructionsRead = false;
 }
 
 var ramseyBolton = new Character("Ramsey",

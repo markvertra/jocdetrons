@@ -50,6 +50,7 @@ $(document).ready(function(){
     $(".begin-battle-btn").on("click", function(){
         $(".battle-instructions-overview").css("display", "none");
         $(".battlefield").css("display", "flex");
+        player1.battleInstructionsRead = true;
         setTimeout( function () {
             AI();
         }, 1000);
@@ -107,7 +108,7 @@ function cooldownBarOne(cooldownTime = DEFAULT_COOLDOWN) {
     playerOneAbilityOne = false;
     $(".cooldown-bar-one-pone").css("background-color", "red");
     $(".cooldown-bar-one-pone").css("width", "0px");
-    $(".cooldown-bar-one-pone").animate({width: 200}, cooldownTime);
+    $(".cooldown-bar-one-pone").animate({width: 220}, cooldownTime);
     
     var barLoad = setTimeout(function() {
     $(".cooldown-bar-one-pone").css("background-color", "blue");
@@ -119,7 +120,7 @@ function cooldownBarTwo(cooldownTime = DEFAULT_COOLDOWN) {
     playerOneAbilityTwo = false;
     $(".cooldown-bar-two-pone").css("background-color", "red");
     $(".cooldown-bar-two-pone").css("width", "0px");
-    $(".cooldown-bar-two-pone").animate({width: 200}, cooldownTime);
+    $(".cooldown-bar-two-pone").animate({width: 220}, cooldownTime);
     
     var barLoad = setTimeout(function() {
     $(".cooldown-bar-two-pone").css("background-color", "blue");
@@ -131,7 +132,7 @@ function cooldownBarThree(cooldownTime = DEFAULT_COOLDOWN) {
     playerOneAbilityThree = false;
     $(".cooldown-bar-three-pone").css("background-color", "red");
     $(".cooldown-bar-three-pone").css("width", "0px");
-    $(".cooldown-bar-three-pone").animate({width: 200}, cooldownTime);
+    $(".cooldown-bar-three-pone").animate({width: 220}, cooldownTime);
     
     var barLoad = setTimeout(function() {
     $(".cooldown-bar-three-pone").css("background-color", "blue");
@@ -143,7 +144,7 @@ function cooldownBarFour(cooldownTime = DEFAULT_COOLDOWN) {
     playerOneAbilityFour = false;
     $(".cooldown-bar-four-pone").css("background-color", "red");
     $(".cooldown-bar-four-pone").css("width", "0px");
-    $(".cooldown-bar-four-pone").animate({width: 200}, cooldownTime);
+    $(".cooldown-bar-four-pone").animate({width: 220}, cooldownTime);
     
     var barLoad = setTimeout(function() {
         $(".cooldown-bar-four-pone").css("background-color", "blue");

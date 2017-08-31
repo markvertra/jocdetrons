@@ -43,6 +43,7 @@ $(document).ready(function(){
         });
 
         $(".map-event").on("click", function(){
+
             if ($(this).hasClass("map-event-winterfell")) {
                 document.querySelector(".i-choose-violence").play();
                 $(".map-section").css("display", "none");
@@ -55,6 +56,9 @@ $(document).ready(function(){
                 player2 = ramseyBolton;
                 battleRestarter();
                 $(".location-title").text("Winterfell");
+                if (player1.battleInstructionsRead) {
+                    $(".begin-battle-btn").trigger("click");
+                }
             } else if ($(this).hasClass("map-event-riverlands")) {
                 document.querySelector(".i-choose-violence").play();
                 $(".map-section").css("display", "none");
@@ -67,6 +71,9 @@ $(document).ready(function(){
                 player2 = gregorClegane;
                 battleRestarter();
                 $(".location-title").text("Riverlands");
+                if (player1.battleInstructionsRead) {
+                    $(".begin-battle-btn").trigger("click");
+                }
             } else if ($(this).hasClass("map-event-casterley")) {
                 document.querySelector(".i-choose-violence").play();
                 $(".map-section").css("display", "none");
@@ -79,6 +86,9 @@ $(document).ready(function(){
                 player2 = tywinLannister;
                 battleRestarter();
                 $(".location-title").text("Casterley Rock");
+                if (player1.battleInstructionsRead) {
+                    $(".begin-battle-btn").trigger("click");
+                }
             } else if ($(this).hasClass("map-event-dragonstone")) {
                 document.querySelector(".i-choose-violence").play();
                 $(".map-section").css("display", "none");
@@ -88,10 +98,12 @@ $(document).ready(function(){
                 $(".battle-section").css("background-image", "url('img/dragonstoneBackground.jpg')");
                 $(".battlefield").css("display", "none");
                 $(this).css("display", "none");
-                
                 player2 = stannisBaratheon;
                 battleRestarter();
                 $(".location-title").text("Dragonstone");
+                if (player1.battleInstructionsRead) {
+                    $(".begin-battle-btn").trigger("click");
+                }
             } else if ($(this).hasClass("map-event-training")) {
                 $(".map-section").css("display", "none");
                 $(".training-section").css("display", "block");
@@ -116,6 +128,9 @@ $(document).ready(function(){
                 player2 = nightKing;
                 battleRestarter();
                 $(".location-title").text("Far Beyond The Wall");
+                if (player1.battleInstructionsRead) {
+                    $(".begin-battle-btn").trigger("click");
+                }
             }
         });
 

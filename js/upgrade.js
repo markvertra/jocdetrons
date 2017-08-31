@@ -82,6 +82,7 @@ function upgradeTimer () {
         $(".upgrade-question-area-wrapper").css("display", "none");
         document.querySelector(".drink-and-know").play();
         clearInterval(timeLeft);
+        $(".upgrade-well-done-info").css("display", "block");
         upgradeManaged();
     } else if (upgradeGame._lossChecker()) {  
         $(".upgrade-time-left-text").text("You lose!");
