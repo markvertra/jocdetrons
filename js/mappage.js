@@ -33,6 +33,7 @@ $(document).ready(function(){
                 document.querySelector(".i-choose-violence").play();
                 $(".map-section").css("display", "none");
                 $(".battle-section").css("display", "block");
+                $(".battle-section").css("background-image", "url('img/winterfellBackground.jpg')");
                 $(".player-one").css("display", "block");
                 $(".player-two").css("display", "block");
                 $(this).css("display", "none");
@@ -48,6 +49,7 @@ $(document).ready(function(){
                 $(".battle-section").css("display", "block");
                 $(".player-one").css("display", "block");
                 $(".player-two").css("display", "block");
+                $(".battle-section").css("background-image", "url('img/riverrunBackground.png')");
                 $(this).css("display", "none");
                 setTimeout( function () {
                     AI();
@@ -61,6 +63,7 @@ $(document).ready(function(){
                 $(".battle-section").css("display", "block");
                 $(".player-one").css("display", "block");
                 $(".player-two").css("display", "block");
+                $(".battle-section").css("background-image", "url('img/casterleyrockBackground.jpg')");
                 $(this).css("display", "none");
                 setTimeout( function () {
                     AI();
@@ -74,6 +77,7 @@ $(document).ready(function(){
                 $(".battle-section").css("display", "block");
                 $(".player-one").css("display", "block");
                 $(".player-two").css("display", "block");
+                $(".battle-section").css("background-image", "url('img/dragonstoneBackground.jpg')");
                 $(this).css("display", "none");
                 setTimeout( function () {
                     AI();
@@ -99,6 +103,7 @@ $(document).ready(function(){
                 $(".battle-section").css("display", "block");
                 $(".player-one").css("display", "block");
                 $(".player-two").css("display", "block");
+                $(".battle-section").css("background-image", "url('img/beyondthewallBackground.jpg')");
                 $(this).css("display", "none");
                 setTimeout( function () {
                     AI();
