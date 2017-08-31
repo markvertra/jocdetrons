@@ -3,6 +3,10 @@ var imgSelection = 0;
 
 $(document).ready(function(){
 
+    $(".create-overlay").on("click", function() {
+        $(".create-overlay").css("display", "none");
+    });
+
     $(".strength-setter").hover(function() {
         $(".attribute-info").css("display", "block");
         $(".attribute-info").text("Strength determines the power of your attacks.");

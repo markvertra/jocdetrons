@@ -70,11 +70,24 @@
         <div class="options">
             <h5 class="options-title">Options</h5>
             <ul class="options-text">
-                <li>Music Volume<button class="music-up-btn up-btn">+</button><button class="music-down-btn down-btn">-</button></li>
+                <li><ul class="volume-slider">
+                        <li class="vol volume1"></li>
+                        <li class="vol volume2"></li>
+                        <li class="vol volume3"></li>
+                        <li class="vol volume4"></li>
+                        <li class="vol volume5"></li>
+                        <li class="vol volume6"></li>
+                        <li class="vol volume7"></li>
+                        <li class="vol volume8"></li>
+                        <li class="vol volume9"></li>
+                        <li class="vol volume10"></li>
+                    </ul>
+                    Music Volume<button class="music-up-btn up-btn">+</button><button class="music-down-btn down-btn">-</button>
+                </li>
                 <li>Difficulty <select class="difficulty-input" id="difficulty">
-                        <option value="easy">Easy</option>
-                        <option value="medium">Medium</option>
-                        <option value="Targaryen">Hard</option>
+                        <option value="easy">Cowardly</option>
+                        <option value="medium">Mercenary</option>
+                        <option value="Targaryen">Heroic</option>
                     </select></li>
                 <li></li>
                 <li><div class="acknowledged options-quit-btn">Return to Main Menu</div></li>
@@ -90,6 +103,15 @@
     </main>
 
     <main class="create-section">
+        <div class="overlay create-overlay">
+            <div class="play-instructions create-play-instructions">
+                <img class="maester-aemon create-maester-aemon" src="img/maesterAemon.jpg"></img>
+                <h3>Maester Aemon's Advice</h3>
+                <p class="create-advice-text-one">Build your hero the way you want</p>
+                <p class="create-advice-text-two">Each affiliation gives a unique ability</p>
+                <p class="create-advice-text-three">Choose your own photo and look</p>
+            </div>
+        </div>
         <div class="title-box create-title-box">
             <h1 class="game-title create-title">Create Your Hero</h1>
         </div>
@@ -160,6 +182,15 @@
                 magic teleportation device to warp to that location and commence battle.</p>
                 <button class="acknowledged quit-btn map-quit-btn">Run like the hound in a fire</button>
                 <button class="acknowledged map-instructions-hide-btn">I will save Westeros, my lord</button>
+        </div>
+        <div class="overlay map-overlay">
+            <div class="play-instructions map-play-instructions">
+                <img class="maester-aemon map-maester-aemon" src="img/maesterAemon.jpg"></img>
+                <h3>Maester Aemon's Advice</h3>
+                <p class="map-advice-text-one">The monsters of Westeros are mighty</p>
+                <p class="map-advice-text-two">Maybe it is best to start by <span class="training-color-text"> training </span></p>
+                <p class="map-advice-text-three">And then by <span class="special-color-text">upgrading your special attack </span></p>
+            </div>
         </div>
         <div class="map-event map-event-winterfell">
         </div>

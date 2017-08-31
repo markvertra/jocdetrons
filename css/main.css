@@ -120,7 +120,7 @@ button:focus {
 }
 
 .difficulty-input {
-    margin-left: 130px;
+    margin-left: 80px;
     line-height: 2em;
     font-size: 0.7em;
 }
@@ -135,4 +135,35 @@ button:focus {
 
 .acknowledged:hover {
     color: white;
+}
+
+.overlay {
+    height: 700px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    display: none;
+    position: absolute;
+}
+
+.maester-aemon {
+    float: left;
+    height: 120px;
+}
+
+.volume-slider li {
+    display: inline;
+}
+
+.vol {
+    height: 20px;
+    width: 10px;
+    background-color: black;
+    float:right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.volume10, .volume9, .volume8,
+.volume7, .volume6 {
+    background-color: green;
 }

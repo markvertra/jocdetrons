@@ -40,9 +40,19 @@
     to {background-color: blue;}
 }
 
+@keyframes color_change_special_text {
+    from { color: green;}
+    to {color: blue;}
+}
+
 @keyframes color_change_training {
     from { background-color: pink;}
     to {background-color: purple;}
+}
+
+@keyframes color_change_training_text {
+    from { color: pink;}
+    to { color: purple;}
 }
 
 .map-event-winterfell {
@@ -144,6 +154,40 @@
     font-family: "raleway", sans-serif;
 }
 
+.map-advice-text-one, .map-advice-text-two, .map-advice-text-three {
+    display: none
+}
+
+
+.play-instructions {
+    width: 400px;
+    height: 200px;
+    background-image: url("../img/paperscrollBackground.jpg");
+    border: 3px solid black;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    padding: 20px;
+    font-family: "raleway", sans-serif;
+}
+
+.play-instructions h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.play-instructions p {
+    line-height: 1.5em;
+    margin: 10px 0px;
+}
+
+.training-color-text {
+    animation: color_change_training_text 1s infinite alternate;
+}
+
+.special-color-text {
+    animation: color_change_special_text 1s infinite alternate;
+}
 
 
 .stats-left, .stats-right {

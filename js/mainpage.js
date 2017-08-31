@@ -6,6 +6,7 @@ $(document).ready(function(){
     $(".play-button").on("click", function(){
         $(".first-section").css("display", "none");
         $(".create-section").css("display", "block");
+        $(".create-overlay").css("display", "block");
         document.querySelector(".win-or-die").play();
     });
 
@@ -20,11 +21,23 @@ $(document).ready(function(){
     });
 
     $(".music-up-btn").on("click", function() {
-        document.querySelector(".reins").volume += 0.1;
+        if (document.querySelector(".reins").volume.toFixed(1) != 1.0) {
+            document.querySelector(".reins").volume += 0.1;
+            var musicStarterNext = musicStarter.prev();
+            musicStarterNext.css("background", "green");
+            musicStarter = musicStarterNext;
+          }  else {
+            
+          }
     });
 
     $(".music-down-btn").on("click", function() {
-        document.querySelector(".reins").volume -= 0.1;
+        if (document.querySelector(".reins").volume.toFixed(1) != 0.1) {
+            document.querySelector(".reins").volume -= 0.1;
+            musicStarter.css("background", "black");
+            musicStarter = musicStarter.next();
+        } else {
+        }
     });
 
     $(".options-button").on("click", function() {
@@ -39,3 +52,5 @@ $(document).ready(function(){
         battlesWon = 0;
     });
 });
+
+var musicStarter = $(".volume6");

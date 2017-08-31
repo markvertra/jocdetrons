@@ -107,7 +107,7 @@ function joffreyAutomated () {
                 
             } 
         }
-    }, ((trainingGame.timePerJoffrey - trainingGame.difficulty / 2 + (Math.random() * trainingGame.difficulty)) * 300));
+    }, this.timePerJoffrey * 100);
 }
 
 function goodieAutomated () {

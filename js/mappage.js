@@ -10,12 +10,26 @@ $(document).ready(function(){
         });
 
         $(".map-instructions-hide-btn").on("click", function(){
+            $(".map-overlay").css("display", "block");
             $(".map-display").css("display", "none");
+            setTimeout(function() {
+                $(".map-advice-text-one").css("display", "block");
+            }, 1000);
+            setTimeout(function() {
+                $(".map-advice-text-two").css("display", "block");
+                $(".map-event-training").css("display", "block");
+            }, 2000);
+            setTimeout(function() {
+                $(".map-advice-text-three").css("display", "block");
+                $(".map-event-special").css("display", "block");
+            }, 3000);
+            });
+
+        $(".map-overlay").on("click", function() {
             $(".map-event").css("display", "block");
             $(".map-event-wall").css("display", "none");
             $(".display-stats-btn").css("display", "block");
-            $(".map-train-btn").css("display", "block");
-            $(".upgrade-special-btn").css("display", "block");
+            $(".map-overlay").css("display", "none");
         });
 
         $(".display-stats-btn").on("click", function() {

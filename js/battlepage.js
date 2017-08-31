@@ -52,24 +52,26 @@ $(document).ready(function(){
         player1.battlesWon++;
         player1.enemiesDefeated++;
         healthResetter();
-        $(".battle-won").css("display", "none");
+        $(".battle-won").css("display", "block");
         $(".map-event-training").css("display", "block");
 
         statsFiller();
-        if (player1.battlesWon < 4) {
-            $(".battle-section").css("display", "none");
-            $(".map-section").css("display", "block");
-            document.querySelector(".we-have-won").play();
-        } else if (player1.battlesWon === 5) {
-            document.querySelector(".drink").play();
-            $(".battle-section").css("display", "none");
-            $(".game-won").css("display", "block");
-        } else {
-            $(".battle-section").css("display", "none");
-            $(".map-section").css("display", "block");
-            $(".map-event-wall").css("display", "block");
-            document.querySelector(".we-have-won").play();
-        } 
+        setTimeout(function() {
+            if (player1.battlesWon < 4) {
+                $(".battle-section").css("display", "none");
+                $(".map-section").css("display", "block");
+                document.querySelector(".we-have-won").play();
+            } else if (player1.battlesWon === 5) {
+                document.querySelector(".drink").play();
+                $(".battle-section").css("display", "none");
+                $(".game-won").css("display", "block");
+            } else {
+                $(".battle-section").css("display", "none");
+                $(".map-section").css("display", "block");
+                $(".map-event-wall").css("display", "block");
+                document.querySelector(".we-have-won").play();
+            } 
+        }, 5000);
     });
 
 });
