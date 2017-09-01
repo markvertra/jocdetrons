@@ -180,3 +180,19 @@
 .battle-quit-btn {
     display: none;
 }
+
+.attacker-image {
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    position: absolute;
+}
+
+.player1-attacker-image {
+    
+    left: 0%;
+}
+
+.player2-attacker-image {
+    right: 0%;
+}

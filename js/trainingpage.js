@@ -120,7 +120,7 @@ function goodieAutomated () {
                     goodieTimer();
                 } 
             }
-    }, ((trainingGame.timePerGoodie - trainingGame.difficulty / 2 + (Math.random() * trainingGame.difficulty)) * 300));
+    }, this.timePerGoodie * 100);
 }
 
 function positionRandomiser (item) {

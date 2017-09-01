@@ -21,6 +21,7 @@ $(document).ready(function(){
             upgradeGame.answersCorrect++;
             $(".upgrade-correct-text").text(upgradeGame.answersCorrect);
             squareResetter(PICTURE_SCREENS);
+            document.querySelector(".hodor").play();
         } else {
             upgradeGame.answersWrong++;
             $(".upgrade-wrong-text").text(upgradeGame.answersWrong);
