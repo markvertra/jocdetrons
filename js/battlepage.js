@@ -67,6 +67,7 @@ $(document).ready(function(){
 
         statsFiller();
         setTimeout(function() {
+            $(".battle-won").css("display", "none");
             if (player1.battlesWon < 4) {
                 $(".battle-section").css("display", "none");
                 $(".map-section").css("display", "block");
