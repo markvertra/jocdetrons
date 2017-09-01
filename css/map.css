@@ -102,7 +102,7 @@
 
 .map-hints {
     position: absolute;
-    background-image: url("../img/paperscrollBackground.jpg");
+    background-image: url("../img/paperscrollbackground.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     top: 20%;
@@ -134,7 +134,7 @@
     position: absolute;
     top: 7%;
     left: 10%;
-    background-image: url("../img/paperscrollBackground.jpg");
+    background-image: url("../img/paperscrollbackground.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 80%;
@@ -162,7 +162,7 @@
 .play-instructions {
     width: 400px;
     height: 200px;
-    background-image: url("../img/paperscrollBackground.jpg");
+    background-image: url("../img/paperscrollbackground.jpg");
     border: 3px solid black;
     position: absolute;
     top: 50%;

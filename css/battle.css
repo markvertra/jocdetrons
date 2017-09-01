@@ -1,5 +1,5 @@
 .battle-section {
-    background-image: url("../img/medievalBackground.jpg");
+    background-image: url("../img/medievalbackground.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 800px;
@@ -14,7 +14,7 @@
 }
 
 .battle-instructions {
-    background-image: url("../img/paperScrollBackground.jpg");
+    background-image: url("../img/paperscrollbackground.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
@@ -65,7 +65,7 @@
     height: 100%;
     text-align: center;
     border: 3px groove black;
-    background-image: url("../img/paperscrollBackground.jpg");
+    background-image: url("../img/paperscrollbackground.jpg");
     padding: 20px;
     color: black;
     font-family: "raleway", sans-serif;

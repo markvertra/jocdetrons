@@ -9,7 +9,7 @@ button:focus {
 }
 
 .first-section {
-    background-image: url("../img/medievalBackground.jpg");
+    background-image: url("../img/medievalbackground.jpg");
     background-repeat: no-repeat;
     height: 800px;
     border: 50px black solid;
@@ -92,7 +92,7 @@ button:focus {
     width: 70%;
     top: 12%;
     left: 15%;
-    background-image: url("../img/paperscrollBackground.jpg");
+    background-image: url("../img/paperscrollbackground.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     display: none;

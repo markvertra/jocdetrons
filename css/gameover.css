@@ -1,5 +1,5 @@
 .game-over, .battle-won, .game-won {
-    background-image: url("../img/medievalBackground.jpg");
+    background-image: url("../img/medievalbackground.jpg");
     background-repeat: no-repeat;
     height: 800px;
     border: 50px black solid;

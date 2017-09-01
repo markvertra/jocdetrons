@@ -1,5 +1,5 @@
 .create-section {
-    background-image: url("../img/medievalBackground.jpg");
+    background-image: url("../img/medievalbackground.jpg");
     background-repeat: no-repeat;
     height: 800px;
     border: 50px black solid;
@@ -60,7 +60,7 @@
     top: 42%;
     left: 42.5%;
     border: black 2px solid;
-    background-image: url("../img/paperscrollBackground.jpg");
+    background-image: url("../img/paperscrollbackground.jpg");
     display: none;
     color: black;
     text-align: left;
