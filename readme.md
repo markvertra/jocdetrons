@@ -17,7 +17,7 @@ Technologies Used
 
 Usage Instructions 
 
-Load the game at [(https://markvertra.github.io/jocdetrons/)] , click one player and follow the instructiosn in game!
+Load the game at [Game Of Thrones Game](https://markvertra.github.io/jocdetrons/), click one player and follow the instructions in game!
 
 Build you character, train to make her stronger and visit Old Town to upgrade her specials. 
 
