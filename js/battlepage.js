@@ -39,12 +39,13 @@ $(document).ready(function(){
     });
 
     $(".battle-quit-btn").on("click", function(){
-        $(".battle-section").css("display", "none");
-        $(".first-section").css("display", "block");
-        $(".game-over").css("display", "none");
-        battleOpen = false;
-        document.querySelector(".death").play();
-        healthResetter();
+        // $(".battle-section").css("display", "none");
+        // $(".first-section").css("display", "block");
+        // $(".game-over").css("display", "none");
+        // battleOpen = false;
+        // document.querySelector(".death").play();
+        // healthResetter();
+        document.location.reload();
     });
 
     $(".begin-battle-btn").on("click", function(){

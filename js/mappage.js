@@ -113,6 +113,7 @@ $(document).ready(function(){
                 statsFiller();
                 trainingGame = new TrainingGame();
             } else if ($(this).hasClass("map-event-special")) {
+                $(".map-event-special").css("display", "none");
                 $(".map-section").css("display", "none");
                 $(".upgrade-section").css("display", "block");
                 $(this).css("display", "none");

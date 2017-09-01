@@ -80,7 +80,7 @@
 .player-one-header {
     display: flex;
     justify-content: flex-start;
-    font-size: 2em;
+    font-size: 1.8em;
 }
 
 .player-text li {
@@ -96,7 +96,7 @@
 .player-two-header {
     display: flex;
     justify-content: flex-end;
-    font-size: 2em;
+    font-size: 1.8em;
 }
 
 .player-one-key-info, .player-two-key-info {
@@ -186,6 +186,7 @@
     width: 50px;
     background-color: red;
     position: absolute;
+    display: none;
 }
 
 .player1-attacker-image {
