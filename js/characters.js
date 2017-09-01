@@ -1,4 +1,4 @@
-var CHAR_IMAGE_PATH = ["../GameOfThrones/img/characterimages/"];
+var CHAR_IMAGE_PATH = ["img/characterimages/"];
 var CHAR_IMAGE_URLS = [CHAR_IMAGE_PATH + "northerner.jpg",
                        CHAR_IMAGE_PATH + "lannister.jpg",
                        CHAR_IMAGE_PATH + "toughfemale.jpg",
