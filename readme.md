@@ -17,9 +17,11 @@ Technologies Used
 
 Usage Instructions 
 
-Load the game at [Link](https://markvertra.github.io/jocdetrons/)and click one player!
+Load the game at [(https://markvertra.github.io/jocdetrons/)] , click one player and follow the instructiosn in game!
 
-Build you character, train to make her stronger and visit Old Town to upgrade her special
+Build you character, train to make her stronger and visit Old Town to upgrade her specials. 
+
+Fight battles and if you win 4, face off against the Night King.
 
 ---
 
