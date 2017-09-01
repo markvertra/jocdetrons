@@ -13,4 +13,16 @@ CSS3
 JAVASCRIPT ES6
 JQUERY
 
+---
 
+Usage Instructions
+
+Load the game at https://markvertra.github.io/jocdetrons/ and click one player!
+
+Build you character, train to make her stronger and visit Old Town to upgrade her special
+
+---
+
+Contributors
+
+Mark Allen
