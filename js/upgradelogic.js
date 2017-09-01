@@ -1,4 +1,4 @@
-var UPGRADE_IMAGE_PATH = ["../GameOfThrones/img/upgrade/"];
+var UPGRADE_IMAGE_PATH = ["img/upgrade/"];
 var PICTURE_SCREENS = [".upfc1", ".upfc2", ".upfc3", ".upfc4", ".upfc5", ".upfc6", ".upfc7", ".upfc8", ".upfc9", ".upfc10", ".upfc11", ".upfc12", ".upfc13", ".upfc14", ".upfc15", ".upfc16"];
 
 function UpgradeGame () {
