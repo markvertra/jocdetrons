@@ -1,4 +1,4 @@
-# Game of Thrones Browser RPG
+##Game of Thrones Browser RPG##
 
 My first Javascript game, developed while attending the Ironhack demonstration. 
 
@@ -6,7 +6,7 @@ The game is based on the TV series game of thrones and allows the user to develo
 
 ---
 
-# Technologies Used**
+Technologies Used
 
 * HTML5
 * CSS3
@@ -15,7 +15,7 @@ The game is based on the TV series game of thrones and allows the user to develo
 
 ---
 
-# Usage Instructions 
+Usage Instructions 
 
 Load the game at [Link](https://markvertra.github.io/jocdetrons/)and click one player!
 
@@ -23,6 +23,6 @@ Build you character, train to make her stronger and visit Old Town to upgrade he
 
 ---
 
-# Contributors 
+Contributors 
 
 Mark Allen
