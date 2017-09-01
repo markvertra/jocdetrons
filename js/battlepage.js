@@ -68,11 +68,11 @@ $(document).ready(function(){
         statsFiller();
         setTimeout(function() {
             $(".battle-won").css("display", "none");
-            if (player1.battlesWon < 4) {
+            if (player1.battlesWon < 10) {
                 $(".battle-section").css("display", "none");
                 $(".map-section").css("display", "block");
                 document.querySelector(".we-have-won").play();
-            } else if (player1.battlesWon === 5) {
+            } else if (player1.battlesWon === 15) {
                 document.querySelector(".drink").play();
                 $(".battle-section").css("display", "none");
                 $(".game-won").css("display", "block");
